@@ -1,0 +1,175 @@
+$mobile-schedule: "only screen and (max-width : 600px)";
+
+.esr-row {
+	position: relative;
+	
+	&:nth-of-type(odd) {
+		background-color: #fbfcfd;
+	}
+	&.status {
+		&-1 {
+			background-color: #B8C2D8 !important;
+			.actions.esr-registration {
+				.esr-action {
+					&.remove-forever,
+					&.resend-confirmation-email,
+					&.update-free-registration {
+						display: none;
+					}
+					
+				}
+			}
+		}
+		&-2 {
+			background-color: #A5C663 !important;
+			
+			.actions.esr-registration {
+				.esr-action {
+					&.confirm,
+					&.remove-forever {
+						display: none;
+					}
+					&.update-free-registration {
+						.esr-show-status-0, .esr-show-status-1 {
+							display: none;
+						}
+						&.free-registration-status-1 {
+							.esr-show-status-0 {
+								display: inline-block;
+							}
+						}
+						&.free-registration-status-0 {
+							.esr-show-status-1 {
+								display: inline-block;
+							}
+						}
+					}
+				}
+			}
+		}
+		&-3 {
+			background-color: #D46A6A !important;
+			
+			.actions.esr-registration {
+				.esr-action {
+					&.remove,
+					&.resend-confirmation-email,
+					&.update-free-registration {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.actions {
+		position: relative;
+		
+		.esr-action {
+			&.activate,
+			&.deactivate {
+				display: block;
+			}
+		}
+		&.esr-wave {
+			.esr-action {
+				&.activate {
+					display: none;
+				}
+			}
+		}
+		&.esr-teacher {
+			.esr-action {
+				&.activate {
+					display: none;
+				}
+			}
+		}
+		&.esr-course {
+			.esr-action {
+				&.activate, &.remove-forever {
+					display: none;
+				}
+			}
+		}
+	}
+	&.passed {
+		background-color: #EFF0F2;
+		
+		.actions {
+			.esr-action {
+				&.activate, &.remove-forever {
+					display: block;
+				}
+				&.deactivate {
+					display: none;
+				}
+			}
+		}
+	}
+	&:hover {
+		background: #f3f4f6;
+	}
+	&.esr-payment-row {
+		.actions {
+			.esr-action {
+				&.edit {
+					display: block;
+				}
+				&.confirm-payment {
+					display: none;
+				}
+			}
+		}
+		
+		&.paid-status-0 {
+			.actions {
+				.esr-action {
+					&.edit {
+						display: none;
+					}
+					&.confirm-payment {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	.dropdown-menu > li > a {
+		padding: 3px 20px 3px 10px;
+	}
+}
+
+.esr_filter {
+	:after {
+		background: none;
+	}
+}
+
+table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td {
+	border-bottom-width: 0;
+}
+
+table.table-bordered.dataTable th, table.table-bordered.dataTable td {
+	border-left-width: 0;
+}
+
+.dataTables_length {
+	label {
+		padding-right: 5px;
+	}
+}
+
+.esr-row {
+	&.esr-payment-row {
+		background-color: #EFF0F2;
+		
+		&.paid-status {
+			&-1 {
+				background-color: #A5C663;
+			}
+			&-0 {
+				background-color: #B8C2D8;
+			}
+		}
+	}
+}

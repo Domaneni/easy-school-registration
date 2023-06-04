@@ -1,0 +1,844 @@
+.esr-settings {
+    .esr-registered-courses {
+        min-width: 100%;
+        max-width: max-content;
+        width: 100%;
+
+        td {
+            padding: 0 10px;
+            height: 25px;
+            vertical-align: middle;
+        }
+
+        th {
+            height: 25px;
+            vertical-align: middle;
+        }
+
+        &.user-list {
+            tr {
+                &.status-1, &.status-2, &.status-3 {
+                    background: transparent;
+                }
+
+                &.status {
+                    &-0 {
+                        .stat {
+                            background-color: #D46A6A !important;
+                        }
+                    }
+
+                    &-1 {
+                        .stat {
+                            background-color: #B8C2D8 !important;
+                        }
+                    }
+
+                    &-2 {
+                        .stat {
+                            background-color: #A5C663 !important;
+                        }
+                    }
+
+                    &-3 {
+                        .stat {
+                            background-color: #D46A6A !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notice {
+        &.notice-warning {
+            display: none;
+        }
+    }
+
+    &.esr-course-in-numbers {
+        .esr-title {
+            float: left;
+        }
+
+        .esr-recount-button {
+            float: left;
+            margin-top: 23px;
+        }
+
+        .page-title-action {
+            top: 0;
+        }
+
+        .esr-schedule-wrapper {
+            .esr-row {
+                .esr-course {
+                    min-width: 150px;
+
+                    &.esr-empty {
+                        min-width: 0;
+                        max-width: 150px;
+                    }
+
+                    .esr-counts {
+                        .esr-count {
+                            padding-left: 5px;
+
+                            .esr-counts-number {
+                                width: 61px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .esr-select-wave {
+        .page-title-action {
+            top: 0;
+        }
+    }
+
+    .page-title-action {
+        &:active {
+            top: 0;
+        }
+    }
+
+    .esr-half-column {
+        width: 50%;
+        float: left;
+        padding: 0 10px;
+    }
+
+    &.esr-students {
+        h1.wp-heading-inline {
+            width: 100%;
+        }
+    }
+
+    &.esr-payment-emails {
+        .has-change {
+            background-color: #B8C2D8;
+        }
+
+        .no-change {
+            background-color: #A5C663;
+        }
+
+        .not-send {
+            background-color: #D46A6A;
+        }
+    }
+
+    .esr-course-in-numbers-datatable {
+        tbody {
+            tr {
+                background-color: #A5C663;
+
+                a {
+                    color: #000;
+                    text-decoration: underline;
+                }
+
+                &.esr-full {
+                    background-color: #a1afb2;
+                }
+            }
+        }
+    }
+
+    .esr-statistics-box {
+        margin: 10px 0 20px 0;;
+        width: 100%;
+
+        td {
+            padding-left: 10px;
+        }
+    }
+
+    input[type=checkbox] {
+        &:focus {
+            outline: none;
+            outline-offset: unset;
+        }
+    }
+
+    input[type="radio"] {
+        &:focus {
+            outline: none;
+            outline-offset: unset;
+        }
+
+        &:checked::before {
+            width: 8px;
+            height: 8px;
+            margin: 3px 0 0 3px;
+        }
+    }
+
+    .esr_checkbox_input {
+        line-height: 30px;
+
+        input {
+            margin-right: 8px !important;
+            margin-top: 0;
+        }
+    }
+}
+
+.payment-row {
+    &:hover {
+        background-color: #5F9EA0;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+.esr-settings-header {
+    h2 {
+        float: left;
+    }
+
+    .esr-download-button {
+        float: left;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+}
+
+.esr-payments-table {
+    .esr-show-note, .esr-hide-note {
+        margin-left: 5px;
+        width: 100%;
+    }
+
+    .esr-row {
+        .actions.esr-payment {
+            .esr-actions-box {
+                .esr-action.enable-registration {
+                    display: none;
+                }
+            }
+        }
+
+        &.esr-disable-registrations {
+            .actions.esr-payment {
+                .esr-actions-box {
+                    .esr-action {
+                        &.enable-registration {
+                            display: inline-block;
+                        }
+
+                        &.disable-registration {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.esr-student-data {
+    th {
+        padding-right: 10px;
+    }
+}
+
+/*.reg_action {
+	color: #ddd;
+	cursor: pointer;
+	
+	i {
+		&.fa-remove {
+			float: left;
+			margin: 1px auto;
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 23px;
+		}
+		
+		&.fa-check {
+			float: left;
+			margin: 1px auto;
+			display: block;
+			width: 100%;
+			text-align: center;
+			font-size: 23px;
+		}
+	}
+	
+	span {
+		font-size: 11px;
+		color: #000;
+		float: left;
+		text-align: center;
+		width: 100%;
+		margin-top: -8px;
+	}
+}*/
+
+table.dataTable thead #esr_reg_actions.sorting_asc:after {
+    display: none;
+}
+
+.esr-note, .esr-user-note {
+    .esr-show-note {
+        margin: 0 auto;
+        display: block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .esr-hide-note {
+        margin: 0 5px 0 0;
+        display: none;
+        width: 100%;
+        float: left;
+        cursor: pointer;
+    }
+
+    .esr-note-message {
+        display: none;
+        min-width: 150px;
+    }
+}
+
+.registration-row {
+    height: 31px;
+
+    &.status-1 {
+        li.reg_action {
+            float: left;
+            width: 50%;
+            display: block;
+        }
+    }
+
+    &:hover {
+        background-color: #808080;
+    }
+
+    .esr-send {
+        position: absolute;
+        left: 10px;
+        top: 5px;
+    }
+
+    .esr-close {
+        position: absolute;
+        left: 10px;
+        top: 30px;
+    }
+
+    .dancing-as {
+        .esr-send, .esr-close {
+            right: 10px;
+            left: auto;
+        }
+    }
+
+    .actions {
+        .page-title-action {
+            top: 0;
+        }
+    }
+}
+
+.registration-row .dancing-with,
+.registration-row .dancing-as,
+.registration-row .partner-name {
+    position: relative;
+}
+
+.registration-row .dancing-with input,
+.registration-row .partner-name input {
+    margin-left: 20px;
+}
+
+.registration-row .dancing-as input {
+    margin-left: 0;
+}
+
+.registration-row .dancing-as .esr_choice {
+    float: left;
+    width: 100%;
+}
+
+.esr_table_filters #esr_my_courses {
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+#esr-waiting {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #808080;
+    z-index: 9999999;
+    opacity: 0.5;
+}
+
+#esr-waiting .spinner {
+    visibility: visible;
+}
+
+.dancing-school_page_esr_admin_sub_page_add_over_limit .esr-settings .x_title h2 {
+    height: 20px;
+}
+
+.dancing-school_page_esr_admin_sub_page_add_over_limit .esr-settings .x_title {
+    border: none;
+    margin-bottom: 0;
+}
+
+#esr-add-over-limit {
+    display: flex;
+    gap: 50px;
+
+    .esr-column {
+        display: flex;
+        flex-direction: column;
+
+        .form-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .form-row {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+        }
+    }
+}
+
+.esr-course-in-numbers .esr-course {
+    width: 161px;
+    float: left;
+    margin: 10px 10px;
+    height: 150px;
+    background-color: #A5C663;
+}
+
+.esr-course-in-numbers .esr-course.esr-full {
+    background-color: #D46A6A;
+}
+
+.esr-course-in-numbers .esr-course h3 {
+    padding: 0 5px;
+}
+
+.esr-course-in-numbers .esr-course h3 .esr-course-name {
+    width: 100%;
+    display: block;
+}
+
+.esr-course-in-numbers .esr-course h3 .esr-divider {
+    display: none;
+}
+
+.esr-course-in-numbers .esr-course h3 .esr-day,
+.esr-course-in-numbers .esr-course h3 .esr-time {
+    font-size: 0.8em;
+}
+
+.esr-course-in-numbers .esr-course .esr-numbers {
+    padding: 0 5px;
+}
+
+.esr-course-in-numbers .esr-course .esr-numbers .esr-type {
+    width: 70px;
+    display: inline-block;
+}
+
+.esr-hidden {
+    display: none;
+}
+
+.esr-actions-box {
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px rgba(102, 102, 102, .1);
+    margin-top: 4px;
+    position: absolute;
+    width: auto;
+    z-index: 999;
+    display: none;
+
+    &.dropdown-menu {
+        min-width: 190px;
+        flex-direction: column;
+        gap: 10px;
+
+        & > li > a {
+            padding: 3px 20px 3px 10px;
+        }
+    }
+
+    &.esr-registrations-actions {
+        width: 190px;
+    }
+
+    &:after, &:before {
+        bottom: 100%;
+        left: 40%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #fff;
+        border-width: 6px;
+        margin-left: -70px;
+    }
+
+    &:before {
+        border-color: rgba(0, 0, 0, 0);
+        border-bottom-color: #00000026;
+        border-width: 7px;
+        margin-left: -71px;
+    }
+
+    li {
+        display: flex;
+        width: 100%;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        i, span {
+            color: #5A738E;
+            width: auto;
+        }
+
+        i {
+            width: 20px;
+            text-align: center;
+        }
+
+        a {
+            &:hover {
+                text-decoration: none;
+
+                i, span {
+                    color: #00a0d2;
+                }
+            }
+        }
+    }
+
+}
+
+.esr-relative {
+    position: relative;
+}
+
+table.dataTable thead {
+    .sorting_desc:after, .sorting:after, .sorting_asc:after {
+        display: none;
+    }
+}
+
+.esr_list_items {
+    table {
+        border: 1px solid #ccc;
+
+        thead {
+            border-bottom: 1px solid #ccc;
+
+            th {
+                padding-left: 10px;
+            }
+        }
+
+        td, th {
+            width: auto;
+        }
+    }
+}
+
+.esr-tags-table {
+    td {
+        padding: 5px 5px 5px 0;
+    }
+}
+
+.wrap {
+    .wp-heading-inline + .page-title-action {
+        margin-left: 4px;
+    }
+
+    .page-title-action, .page-title-action:active {
+        margin-left: 4px;
+        padding: 4px 8px;
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background: #f7f7f7;
+        text-shadow: none;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: normal;
+        color: #0073aa;
+        cursor: pointer;
+        outline: 0;
+
+        &:hover {
+            border-color: #008EC2;
+            background: #00a0d2;
+            color: #fff;
+        }
+    }
+
+    h1.wp-heading-inline {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.checkbox-label {
+    font-weight: normal;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.esr-socials {
+    font-size: 25px;
+
+    a {
+        margin-right: 5px;
+        box-shadow: none;
+    }
+}
+
+.tippy-tooltip {
+    a, a:hover, a:focus {
+        color: #fff;
+        text-decoration: underline;
+    }
+}
+
+.esr-range-value {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.school_page_esr_admin_sub_page_settings {
+    .esr-settings-enable-style {
+        input {
+            margin-right: 10px;
+            margin-top: 0;
+        }
+    }
+}
+
+.esr-settings-description {
+    &:not(.esr-has-tags) {
+        padding-left: 10px;
+        display: inline;
+    }
+
+    &.esr-has-tags {
+        margin-top: 10px;
+    }
+}
+
+.esr-header-note {
+    .esr-show-all-notes, .esr-hide-all-notes {
+        cursor: pointer;
+    }
+
+    .esr-hide-all-notes {
+        display: none;
+    }
+}
+
+.esr-clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+.esr-download-calendar-buttons {
+    top: 30px;
+    position: absolute;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    background: #fff;
+
+    li {
+        padding: 3px 20px 3px 10px;
+
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+input[name=esr_license_activate_deactivate] {
+    margin-left: 10px;
+}
+
+.default-times {
+    li {
+        float: left;
+        font-size: 12px;
+        margin-right: 5px;
+
+        &:after {
+            content: ",";
+        }
+
+        &:last-child {
+            margin-right: 0;
+
+            &:after {
+                content: "";
+            }
+        }
+    }
+}
+
+.esr-select-wave {
+    padding: 10px 0;
+}
+
+#payments-form {
+    input[name=payment] {
+        margin-right: 5px;
+    }
+}
+
+.wp-core-ui {
+    .button-secondary {
+        &.esr-add-list-item {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.icon {
+    &-facebook {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-right: 10px;
+        background: url("../images/facebook.svg");
+    }
+
+    &-twitter {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-right: 10px;
+        background: url("../images/twitter.svg");
+    }
+
+    &-youtube {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-right: 10px;
+        background: url("../images/youtube.svg");
+    }
+}
+
+@keyframes around {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.esr-user-note {
+    padding-bottom: 10px;
+
+    textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+.esr_save_spinner {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    animation: around 5.4s infinite;
+    display: none;
+    margin-right: 5px;
+
+    &::after, &::before {
+        content: "";
+        background: white;
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-width: 2px;
+        border-color: #333 #333 transparent transparent;
+        border-style: solid;
+        border-radius: 20px;
+        box-sizing: border-box;
+        top: 0;
+        left: 0;
+        animation: around 0.7s ease-in-out infinite;
+    }
+
+    &::after {
+        animation: around 0.7s ease-in-out 0.1s infinite;
+        background: transparent;
+    }
+}
+
+.esr_save_confirmed {
+    display: none;
+    font-size: 27px;
+    margin-right: 5px;
+}
+
+.esr-question {
+    display: inline-block;
+}
+
+@import "../../other/scss/esr-edit-box";
+@import "../../other/scss/esr-schedule-calendar";
+@import "../../other/scss/esr-datatable";

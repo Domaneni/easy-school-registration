@@ -1,0 +1,8 @@
+/node_modules/
+/wp-content/plugins/dcrs/tests/OLDphpunit/
+/OLDtests/
+/reports/
+modules/fio_payments/exports/
+/vendor
+tests2/
+tests/tmp/

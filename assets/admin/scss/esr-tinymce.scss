@@ -1,0 +1,17 @@
+.mce-esr-tinymce-button {
+	button {
+		i,span {
+			float: left;
+		}
+		i {
+			color: #556 !important;
+			font-family: dashicons;
+			font-size: 19px;
+		}
+		span {
+			display: block;
+			margin-top: 3px;
+			margin-left: 3px;
+		}
+	}
+}
