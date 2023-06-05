@@ -4,14 +4,15 @@
  * Plugin URI:      https://easyschoolregistration.com/
  * Description:     Tools to help you run your school better
  *
- * Version:         3.9.3
- * Tested up to:    6.2.0
+ * Version:         3.9.4
+ * Tested up to:    6.2.2
  *
  * Author:          Zbynek Nedoma
  * Author URI:      https://domaneni.cz
  * Plugin Slug:     easy-school-registration
  *
- * Domain Path: /languages
+ * Text Domain:     easy-school-registration
+ * Domain Path:     /languages
  *
  * License: GPL 3
  *
@@ -201,7 +202,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 
                 register_activation_hook(ESR_PLUGIN_FILE, array('ESR_Database', 'esr_database_install_callback'));
 
-				self::$instance->load_textdomain();
+				self::$instance->init();
 
 				self::$instance->settings               = new ESR_Settings();
 				self::$instance->course                 = new ESR_Course();
@@ -275,7 +276,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 
 		private function setup_constants() {
 			define( 'ESR_SLUG', 'esr' );
-			define( 'ESR_VERSION', '3.9.3' );
+			define( 'ESR_VERSION', '3.9.4' );
 			// Plugin Root File.
 			if ( ! defined( 'ESR_PLUGIN_FILE' ) ) {
 				define( 'ESR_PLUGIN_FILE', __FILE__ );
@@ -446,22 +447,31 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 		}
 
 
-		public function load_textdomain() {
-			// This filter is already documented in WordPress core
-			$locale = apply_filters( 'plugin_locale', get_locale(), 'easy-school-registration' );
+        /**
+         * Load actions
+         *
+         * @access private
+         * @return void
+         */
+        private function init() {
+            add_action( 'plugins_loaded', array( $this, 'load_text_domain' ), 99 );
+        }
 
-			$mofile = sprintf( '%1$s-%2$s.mo', 'easy-school-registration', $locale );
 
-			$mofile_local  = trailingslashit( ESR_PLUGIN_URL . 'languages' ) . $mofile;
-			$mofile_global = WP_LANG_DIR . '/easy-school-registration/' . $mofile;
+        /**
+         * Load text domain
+         *
+         * @access public
+         * @return void
+         */
+		public function load_text_domain() {
+            $locale = apply_filters( 'plugin_locale', get_locale(), 'easy-school-registration' );
 
-			if ( file_exists( $mofile_global ) ) {
-				return load_textdomain( 'easy-school-registration', $mofile_global );
-			} else if ( file_exists( $mofile_local ) ) {
-				return load_textdomain( 'easy-school-registration', $mofile_local );
-			} else {
-				return load_plugin_textdomain( 'easy-school-registration', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
-			}
+            $mofile = sprintf( '%1$s-%2$s.mo', 'easy-school-registration', $locale );
+            $mofile_local  = ESR_PLUGIN_DIR . 'languages/' . $mofile;
+
+            load_textdomain( 'easy-school-registration', $mofile_local );
+            load_plugin_textdomain( 'easy-school-registration', false, dirname( plugin_basename( ESR_PLUGIN_DIR ) ) . '/languages/' );
 		}
 
 	}
