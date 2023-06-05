@@ -1,0 +1,2688 @@
+# Copyright (C) 2023 Zbynek Nedoma
+# This file is distributed under the GPL 3.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy School Registration 3.9.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-school-registration\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-06-04T20:03:26+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.8.0\n"
+"X-Domain: easy-school-registration\n"
+
+#. Plugin Name of the plugin
+#: inc/support/esr-user-role-editor.php:14
+#: inc/templaters/administration/school/esr-school.templater.php:16
+#: inc/templaters/user/esr-user.template.php:15
+msgid "Easy School Registration"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://easyschoolregistration.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Tools to help you run your school better"
+msgstr ""
+
+#. Author of the plugin
+msgid "Zbynek Nedoma"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://domaneni.cz"
+msgstr ""
+
+#: easy-school-registration.php:260
+#: easy-school-registration.php:273
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:13
+msgid "School"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:15
+#: inc/templaters/administration/teachers/esr-teachers.templater.php:23
+#: inc/templaters/schedule/esr-schedule.helper.php:144
+msgid "Teachers"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:16
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:15
+msgid "Waves"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:17
+#: inc/class/esr-settings.class.php:795
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:16
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:50
+msgid "Courses"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:19
+#: inc/class/esr-settings.class.php:827
+#: inc/templaters/administration/registration/esr-registrations.template.php:37
+msgid "Registration"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:20
+msgid "Course in numbers"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:21
+msgid "Add over limit"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:23
+#: inc/class/esr-admin.class.php:34
+#: inc/class/esr-settings.class.php:797
+#: inc/class/esr-settings.class.php:828
+#: inc/class/esr-settings.class.php:832
+#: inc/templaters/administration/payments/esr-payments.templater.php:18
+#: inc/templaters/administration/payments/tabs/esr-payment-table-tab.template.php:19
+#: inc/templaters/administration/students/esr-students.template.php:59
+#: inc/templaters/helpers/esr-student-export.templater.php:129
+#: inc/templaters/userinfo/payments/esr.templater.php:19
+msgid "Payments"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:24
+msgid "Payment emails"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:26
+msgid "Settings"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:27
+#: inc/templaters/schedule/esr-schedule.helper.php:70
+msgid "Students"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:33
+#: inc/templaters/userinfo/courses/esr.templater.php:24
+msgid "Student info"
+msgstr ""
+
+#: inc/class/esr-admin.class.php:41
+#: inc/templaters/teacherinfo/esr-teacher-info.template.php:24
+msgid "Teacher info"
+msgstr ""
+
+#: inc/class/esr-ajax.class.php:191
+msgid "Email with export was sent."
+msgstr ""
+
+#: inc/class/esr-ajax.class.php:196
+msgid "Some error occured."
+msgstr ""
+
+#: inc/class/esr-currency.class.php:15
+msgid "US Dollars (&#36;)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:19
+msgid "Euros (&euro;)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:23
+msgid "Pound Sterling (&pound;)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:27
+msgid "Czech Crown (Kč)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:31
+msgid "Danish Krone (kr)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:35
+msgid "Hungarian Forint (Ft)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:39
+msgid "Polish Zloty (Z&#x142;)"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:43
+msgid "Thai Baht (฿)"
+msgstr ""
+
+#: inc/class/esr-ribbon.class.php:25
+msgid "Course is Full"
+msgstr ""
+
+#: inc/class/esr-ribbon.class.php:35
+msgid "Course is Disabled"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:27
+msgid "Default Pairing Mode"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:34
+msgid "Halls"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:36
+#: inc/class/esr-settings.class.php:784
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:38
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:128
+#: inc/templaters/teacherinfo/esr-teacher-info-courses-table.templater.php:19
+msgid "Hall"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:40
+msgid "Groups"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:41
+msgid "Assigning courses to groups, you are able to define group bulk discounts as well as specific colors and filters in the Registration Form."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:43
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:37
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:369
+msgid "Group"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:47
+msgid "Levels"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:48
+msgid "Assigning courses to levels, you are able to define specific colors and filters in the Registration Form."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:50
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:36
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:389
+msgid "Level"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:56
+#: inc/class/esr-settings.class.php:796
+msgid "Currency"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:57
+msgid "Choose your currency."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:64
+msgid "Currency Position"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:65
+msgid "Choose the position of the currency symbol."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:68
+msgid "Before - $10"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:69
+msgid "Before with space - $ 10"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:70
+msgid "After - 10$"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:71
+msgid "After with space - 10 $"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:78
+msgid "Bank Account"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:84
+msgid "IBAN"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:90
+msgid "BIC"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:96
+msgid "Constant Symbol"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:102
+msgid "Round Payments"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:103
+msgid "If enabled, all new payments will be rounded to whole numbers."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:111
+msgid "Enable Debts Tab"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:112
+msgid "Debts tab will be shown in Payment menu."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:120
+#: inc/class/esr-settings.class.php:204
+msgid "Show Phone Number"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:121
+msgid "If enabled, phone numbers will be displayed in the Registration table."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:127
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:50
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:106
+msgid "Free Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:128
+msgid "If enabled, Free Course functionality will become available. Visit Documentation page to learn about this feature."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:136
+msgid "Pre-load CSS Styles"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:137
+msgid "If enabled, all scripts will be loaded on every page. Caution, use only if you fully understand the impact!"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:145
+msgid "Enabled Log"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:155
+msgid "Show Basic Statistics"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:163
+msgid "Enable Multiple Dates"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:171
+msgid "Display Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:181
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:85
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:92
+msgid "Payment Status"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:182
+msgid "If enabled, Payment Status will be shown in registrations tab."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:188
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:67
+msgid "User Note"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:189
+msgid "If enabled, User Note will be shown in registrations tab."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:197
+msgid "Show Courses"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:198
+msgid "By enabling, courses column will be shown in payments table."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:205
+msgid "If enabled, phone numbers will be displayed in the Payment table."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:211
+msgid "Default Payment Method"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:212
+msgid "Select which payment method will be used as default in payment editor."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:219
+msgid "Payment Methods"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:220
+msgid "."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:222
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:102
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:21
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:30
+msgid "Payment Method"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:228
+msgid "Course Price"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:234
+msgid "Course Times"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:236
+msgid "Course Time"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:245
+msgid "From Name"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:246
+msgid "Sender name for automated emails. This should ideally be your site name."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:253
+msgid "From Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:254
+msgid "Email address for automated emails. It will also act as \"from\" and \"reply-to\" address."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:261
+msgid "Bcc Email Address"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:262
+msgid "Email address to receive a secret copy of every email sent by the system. Allows you to back up and re-send any email."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:268
+msgid "Enable Floating Price"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:269
+msgid "If enabled, floting_price tag will be available for Course Confirmation Emails."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:275
+msgid "<strong>Important:</strong> Every web hosting has a different default limit for sending emails. During the registration process, based on which email templates you are using, each Student can receive several emails from the system. Make sure to check your web hosting settings and increase the limit to at least 500 emails/hour. If you run many courses, we recommend even higher number just to be safe during the rush hours after opening registration. Having a low limit can result in Students not getting their emails as the system will not be able to send emails over the limit."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:280
+msgid "Enable WP mail"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:281
+msgid "This plugin is using PHP mail function to sending emails. If you want you can change it to Wordpress wp_mail function."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:289
+msgid "Enable User Registration Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:290
+msgid "If enabled, login details to Student Info section will be sent. The email is sent only once during the first sign-up."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:296
+#: inc/class/esr-settings.class.php:319
+#: inc/class/esr-settings.class.php:342
+#: inc/class/esr-settings.class.php:392
+#: inc/class/esr-settings.class.php:442
+#: inc/class/esr-settings.class.php:483
+#: inc/class/esr-settings.class.php:506
+#: inc/class/esr-settings.class.php:529
+msgid "Email Subject"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:297
+#: inc/class/esr-settings.class.php:304
+#: inc/class/esr-settings.class.php:320
+#: inc/class/esr-settings.class.php:327
+#: inc/class/esr-settings.class.php:343
+#: inc/class/esr-settings.class.php:350
+#: inc/class/esr-settings.class.php:393
+#: inc/class/esr-settings.class.php:400
+#: inc/class/esr-settings.class.php:443
+#: inc/class/esr-settings.class.php:450
+#: inc/class/esr-settings.class.php:484
+#: inc/class/esr-settings.class.php:491
+#: inc/class/esr-settings.class.php:507
+#: inc/class/esr-settings.class.php:514
+#: inc/class/esr-settings.class.php:530
+#: inc/class/esr-settings.class.php:537
+#: inc/class/esr-settings.class.php:614
+msgid "Available template tags:"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:303
+#: inc/class/esr-settings.class.php:326
+#: inc/class/esr-settings.class.php:349
+#: inc/class/esr-settings.class.php:399
+#: inc/class/esr-settings.class.php:449
+#: inc/class/esr-settings.class.php:490
+#: inc/class/esr-settings.class.php:513
+#: inc/class/esr-settings.class.php:536
+msgid "Email Body"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:312
+msgid "Enable Registration Overview Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:313
+msgid "If enabled, an overview email of registered courses will be sent."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:335
+msgid "Enable Course Confirmation Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:336
+msgid "If enabled, Confirmation Email is sent for every course with status \"Confirmed\"."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:358
+msgid "Enable Waiting Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:359
+msgid "If enabled, Waiting Email is sent for every course with status \"Waiting\"."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:365
+msgid "Enable Automatic Waiting Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:366
+msgid "If enabled, Waiting Email will be sent automatically."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:372
+#: inc/class/esr-settings.class.php:422
+#: inc/class/esr-settings.class.php:463
+msgid "Days"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:373
+#: inc/class/esr-settings.class.php:423
+msgid "How many days before wave starts do you want to send this email?"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:376
+msgid "1 day after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:377
+msgid "2 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:378
+msgid "3 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:379
+msgid "4 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:380
+msgid "5 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:381
+msgid "6 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:382
+msgid "7 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:383
+msgid "8 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:384
+msgid "9 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:385
+msgid "10 days after registration starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:408
+msgid "Enable Payment Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:409
+msgid "If enabled, Payment Email can be sent via Payment section."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:415
+msgid "Enable Automatic Payment Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:416
+msgid "If enabled, Payment Email will be sent automatically."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:426
+msgid "10 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:427
+msgid "9 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:428
+msgid "8 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:429
+msgid "7 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:430
+msgid "6 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:431
+msgid "5 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:432
+msgid "4 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:433
+msgid "3 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:434
+msgid "2 days before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:435
+msgid "1 day before wave starts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:456
+msgid "Enable Automatic Payment Reminder Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:457
+msgid "If enabled, Payment Reminder Email will be sent automatically."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:464
+msgid "How many days after last payment email you want to send next one?"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:467
+msgid "1 day after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:468
+msgid "2 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:469
+msgid "3 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:470
+msgid "4 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:471
+msgid "5 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:472
+msgid "6 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:473
+msgid "7 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:474
+msgid "8 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:475
+msgid "9 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:476
+msgid "10 days after last payment email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:499
+msgid "Enable Payment Confirmation Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:500
+msgid "If enabled, Payment Confirmation Email is sent when the payment is confirmed in the Payment section."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:522
+msgid "Enable GDPR Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:523
+msgid "General Data Protection Regulation - any user can request an overview and deletion of personal data stored about him. If enabled, such overview can be sent via Student section."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:545
+msgid "Enable Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:546
+msgid "If enabled, administrator will receive email with note from registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:552
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:41
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:93
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:34
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:82
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:75
+#: inc/templaters/administration/students/esr-students.template.php:25
+#: inc/templaters/esr-registration.templater.php:137
+msgid "Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:553
+msgid "Email where the note will be sent."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:562
+msgid "Default Schedule Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:569
+msgid "Show Schedule Before Registration"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:570
+msgid "If enabled, wave schedule will be shown in registration form before registration starts."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:576
+msgid "Partner Selection Required"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:577
+msgid "If enabled, students have to select during the registration whether they have a partner or not. This greatly reduces mistakes during registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:583
+msgid "Show Phone Input"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:584
+msgid "If enabled, show Phone Number input during registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:590
+msgid "Phone Number Required"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:591
+msgid "If enabled, Phone Number is required during registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:597
+msgid "Re-confirm Student Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:598
+msgid "If enabled, emaill address will be required 2x in the registration form. Helps to prevent misspells in the email address - recommended feature."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:604
+msgid "Allow multiple registrations"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:605
+msgid "If enabled, user will be able to register multiple times on the same course."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:613
+msgid "Registration Not Opened Yet"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:619
+msgid "Date and time of wave registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:626
+msgid "Registration Closed"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:633
+msgid "Dancing Us Leader"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:634
+msgid "Change default Leader translation in registration form"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:639
+msgid "Dancing Us Follower"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:640
+msgid "Change default Follower translation in registration form"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:645
+msgid "Note Title"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:646
+msgid "Customize the title of the Note section in the Registration Form. If left blank, the title is \"Note\"."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:648
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:86
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:120
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:25
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:31
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:39
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:62
+#: inc/templaters/administration/students/esr-students.template.php:33
+#: inc/templaters/esr-registration.templater.php:211
+#: inc/templaters/helpers/esr-student-export.templater.php:99
+msgid "Note"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:652
+msgid "Disable Note"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:653
+msgid "If checked, note field will be removed from registration form"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:659
+msgid "Note Limit"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:660
+msgid "Set how many characters can students write to note."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:669
+msgid "Thank You Text"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:677
+msgid "Enable Newsletter Consent"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:678
+msgid "If enabled, newsletter confirmation checkbox will be displayed during registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:683
+msgid "Newsletter Opt-out"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:684
+msgid "If enabled, newsletter checkbox will be ticked by default and students can opt-out."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:690
+msgid "Confirmation Text"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:697
+msgid "Enable Terms & Conditions"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:698
+msgid "If enabled, Terms & Conditions checkbox will be displayed during registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:703
+msgid "Require Terms & Conditions"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:704
+msgid "If enabled, Terms & Conditions confirmation will be required to finish registration."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:709
+msgid "Terms & Conditions Text"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:716
+msgid "Enable Ribbon For Full Courses"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:717
+msgid "If enabled, ribbon will be show for full courses."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:723
+msgid "Full Ribbon Text"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:728
+msgid "Enable Ribbon For Disabled Courses"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:729
+msgid "If enabled, ribbon will be show for disabled courses."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:735
+msgid "Disabled Ribbon Text"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:744
+msgid "Show Already Paid"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:745
+msgid "Upon loggin to the account, the student can see how much money was received by the school for his registration in comparison to how much he needs to pay in total."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:753
+msgid "Show Paired Partner"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:754
+msgid "Show automatically paired partner name."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:783
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:31
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:265
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:81
+#: inc/templaters/teacherinfo/esr-teacher-info-courses-table.templater.php:17
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:21
+msgid "Day"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:785
+#: inc/class/esr-settings.class.php:1111
+msgid "Normal Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:786
+#: inc/class/esr-settings.class.php:1148
+msgid "Selected Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:787
+#: inc/class/esr-settings.class.php:1185
+msgid "Full Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:789
+#: inc/class/esr-settings.class.php:817
+msgid "Registration Form"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:798
+#: inc/templaters/administration/payments/esr-payments.templater.php:25
+msgid "Student Debts"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:799
+msgid "Registration Section"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:800
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:357
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:357
+msgid "Advanced"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:801
+msgid "Logs"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:804
+#: inc/class/esr-settings.class.php:815
+#: inc/class/esr-settings.class.php:824
+#: inc/class/esr-settings.class.php:849
+msgid "General"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:805
+msgid "User Registration Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:806
+msgid "Registration Overview Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:807
+msgid "Course Confirmation Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:809
+msgid "Payment Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:810
+msgid "Payment Confirmation Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:811
+msgid "GDPR Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:812
+msgid "Registration Note Email"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:816
+msgid "Open / Closed"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:818
+msgid "Thank You Page"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:819
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:20
+#: inc/templaters/user/esr-user.template.php:22
+msgid "Newsletter"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:820
+#: inc/templaters/helpers/esr-student-export.templater.php:74
+msgid "Terms & Conditions"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:821
+msgid "Ribbons"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:825
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:55
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:29
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:52
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:80
+#: inc/templaters/administration/students/esr-students.template.php:49
+#: inc/templaters/esr-registration.templater.php:60
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:25
+#: inc/templaters/helpers/esr-student-export.templater.php:94
+#: inc/templaters/teacherinfo/esr-teacher-info-courses-table.templater.php:16
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:20
+msgid "Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:826
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers.template.php:30
+msgid "Course In Numbers"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:829
+msgid "Default Values"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:850
+msgid "Emails"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:851
+msgid "Schedule / Registration"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:852
+msgid "Administration"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:853
+msgid "Student Section"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:856
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:348
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:348
+msgid "Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:859
+msgid "Extensions"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:862
+msgid "Licenses"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1012
+msgid "Disable Styles"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1013
+msgid "If enabled all frontend styles will be disabled. Please use only if you know what you are doing."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1019
+msgid "Empty Course Box"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1020
+msgid "Backgroud box color when the time slot has no course in it."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1035
+msgid "Day Box Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1048
+msgid "Day Text Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1061
+msgid "Box Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1074
+msgid "Text Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1087
+msgid "Selected Tickets Main Text Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1098
+msgid "Selected Tickets Additional Text Style"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1124
+msgid "Normal Course Title"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1135
+msgid "Normal Course Description"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1161
+msgid "Selected Course Title"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1172
+msgid "Selected Course Description"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1187
+msgid "Color of the course which is not selectable for registration due to being full."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1199
+msgid "Full Course Title"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1210
+msgid "Full Course Description"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1223
+msgid "Disabled Course"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1225
+msgid "Color of the course which is not selectable for registration due to being disabled."
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1237
+msgid "Disabled Course Title"
+msgstr ""
+
+#: inc/class/esr-settings.class.php:1248
+msgid "Disabled Course Description"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:26
+#: inc/class/esr-tags.class.php:178
+#: inc/class/esr-tags.class.php:260
+#: inc/class/esr-tags.class.php:342
+#: inc/class/esr-tags.class.php:385
+#: inc/class/esr-tags.class.php:452
+#: inc/class/esr-tags.class.php:508
+#: inc/class/esr-tags.class.php:538
+#: inc/class/esr-tags.class.php:561
+#: inc/class/esr-tags.class.php:584
+#: inc/class/esr-tags.class.php:600
+#: inc/class/esr-tags.class.php:616
+msgid "Student first name."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:33
+#: inc/class/esr-tags.class.php:185
+#: inc/class/esr-tags.class.php:267
+#: inc/class/esr-tags.class.php:349
+#: inc/class/esr-tags.class.php:392
+#: inc/class/esr-tags.class.php:459
+#: inc/class/esr-tags.class.php:515
+#: inc/class/esr-tags.class.php:545
+#: inc/class/esr-tags.class.php:568
+#: inc/class/esr-tags.class.php:591
+#: inc/class/esr-tags.class.php:607
+#: inc/class/esr-tags.class.php:623
+msgid "Student surname."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:40
+msgid "Course title."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:47
+msgid "Course subtitle."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:54
+msgid "Teacher names for this course."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:61
+msgid "Day when the course is happening."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:68
+msgid "Date when the course is starting."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:75
+msgid "Date when the course is ending."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:82
+msgid "Start time of the course."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:89
+msgid "End time of the course."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:96
+msgid "List of days and times when the course is happening."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:103
+msgid "Course price with currency. (example: 10 $)"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:110
+msgid "Dancing Role (leader/follower)."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:117
+msgid "Name of the hall where the course is taking place."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:124
+msgid "Hall address."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:131
+#: inc/class/esr-tags.class.php:199
+#: inc/class/esr-tags.class.php:281
+#: inc/class/esr-tags.class.php:365
+#: inc/class/esr-tags.class.php:436
+#: inc/class/esr-tags.class.php:501
+#: inc/class/esr-tags.class.php:524
+#: inc/class/esr-tags.class.php:554
+#: inc/class/esr-tags.class.php:577
+msgid "Name of the wave the course belongs to."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:138
+#: inc/class/esr-tags.class.php:227
+#: inc/class/esr-tags.class.php:309
+msgid "Bank account number for sending money."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:144
+#: inc/class/esr-tags.class.php:233
+#: inc/class/esr-tags.class.php:315
+msgid "IBAN code."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:150
+#: inc/class/esr-tags.class.php:239
+#: inc/class/esr-tags.class.php:321
+msgid "BIC code."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:156
+#: inc/class/esr-tags.class.php:245
+#: inc/class/esr-tags.class.php:327
+msgid "Unique variable symbol to identify each payment. One student has one unique VS per wave."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:163
+msgid "Unique variable symbol to identify each payment. One student has one unique VS per course registration."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:170
+#: inc/class/esr-tags.class.php:252
+#: inc/class/esr-tags.class.php:334
+msgid "Fixed constant symbol to identify course payments in your bank statement (among other transfers to your account)."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:192
+#: inc/class/esr-tags.class.php:274
+msgid "List of courses the student is confirmed to."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:206
+#: inc/class/esr-tags.class.php:288
+msgid "Total price of all confirmed courses."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:213
+#: inc/class/esr-tags.class.php:295
+msgid "How much has already been paid (see Payments section)."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:220
+#: inc/class/esr-tags.class.php:302
+msgid "Difference between the Price To Pay and the price Already Paid."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:356
+msgid "Tables with student information."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:373
+#: inc/class/esr-tags.class.php:483
+msgid "Anything written between these two tags will be displayed only if at least some courses were registered."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:378
+#: inc/class/esr-tags.class.php:488
+msgid "List of registered courses."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:399
+msgid "Student email."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:406
+msgid "Student phone."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:413
+msgid "Note left during the registration."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:420
+msgid "Newsletter checkbox selected. (Yes/No)"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:427
+msgid "Terms&Conditions checkbox selected. (Yes/No)"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:443
+msgid "List of waiting courses."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:466
+msgid "Student username for login into the system. Students can see only the Student Info section. (..yourwebsite.com/wp-admin)"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:473
+msgid "Student password for login into the system. Students can see only the Student Info section. (..yourwebsite.com/wp-admin)"
+msgstr ""
+
+#: inc/class/esr-tags.class.php:531
+msgid "Course name."
+msgstr ""
+
+#: inc/class/esr-tags.class.php:634
+msgid "Course price after considering all applicable discounts."
+msgstr ""
+
+#: inc/enums/esr-course-group.enum.php:35
+msgid "Choose an option"
+msgstr ""
+
+#: inc/enums/esr-dancing-as.enum.php:18
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:30
+msgid "Leader"
+msgstr ""
+
+#: inc/enums/esr-dancing-as.enum.php:21
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:77
+msgid "Follower"
+msgstr ""
+
+#: inc/enums/esr-dancing-as.enum.php:24
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:27
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:51
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:33
+msgid "Solo"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:23
+msgid "Monday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:24
+msgid "Mon"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:27
+msgid "Tuesday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:28
+msgid "Tue"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:31
+msgid "Wednesday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:32
+msgid "Wed"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:35
+msgid "Thursday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:36
+msgid "Thu"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:39
+msgid "Friday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:40
+msgid "Fri"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:43
+msgid "Saturday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:44
+msgid "Sat"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:47
+msgid "Sunday"
+msgstr ""
+
+#: inc/enums/esr-day.enum.php:48
+msgid "Sun"
+msgstr ""
+
+#: inc/enums/esr-free-registration.enum.php:23
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:241
+msgid "Paid Registration"
+msgstr ""
+
+#: inc/enums/esr-free-registration.enum.php:24
+msgid "Registration set to paid"
+msgstr ""
+
+#: inc/enums/esr-free-registration.enum.php:27
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:89
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:242
+msgid "Free Registration"
+msgstr ""
+
+#: inc/enums/esr-free-registration.enum.php:28
+msgid "Registration set to free"
+msgstr ""
+
+#: inc/enums/esr-hover-option.enum.php:23
+msgid "Number of registrations"
+msgstr ""
+
+#: inc/enums/esr-hover-option.enum.php:26
+msgid "Places left"
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:21
+msgid "Automatic"
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:22
+msgid "Students will be automatically paired until the course is full."
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:25
+msgid "Manual"
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:26
+msgid "Students will be on a Waiting List until they are manually confirmed. Pairing is disabled."
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:29
+msgid "Confirm All"
+msgstr ""
+
+#: inc/enums/esr-pairing-mode.enum.php:30
+msgid "Students will be automatically confirmed immediately after registration until the course is full. Pairing is disabled."
+msgstr ""
+
+#: inc/enums/esr-payment-emails.enum.php:24
+msgid "Not Sent"
+msgstr ""
+
+#: inc/enums/esr-payment-emails.enum.php:27
+msgid "Already Sent"
+msgstr ""
+
+#: inc/enums/esr-payment-emails.enum.php:30
+msgid "Registration Changes"
+msgstr ""
+
+#: inc/enums/esr-payment-type.enum.php:24
+msgid "Cash"
+msgstr ""
+
+#: inc/enums/esr-payment-type.enum.php:28
+msgid "Bank Transfer"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:22
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:27
+msgid "Not Paid"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:26
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:59
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:40
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:41
+#: inc/templaters/administration/students/esr-students.template.php:67
+#: inc/templaters/userinfo/payments/esr.templater.php:27
+msgid "Paid"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:30
+msgid "Overpaid"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:34
+msgid "Not Paying"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:38
+msgid "Voucher"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:42
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:74
+msgid "Partially Paid"
+msgstr ""
+
+#: inc/enums/esr-payment.enum.php:46
+msgid "Forgiven"
+msgstr ""
+
+#: inc/enums/esr-registration-status.enum.php:21
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-statistics.template.php:23
+#: inc/templaters/administration/registration/esr-registration-statistics.template.php:26
+msgid "Waiting"
+msgstr ""
+
+#: inc/enums/esr-registration-status.enum.php:24
+#: inc/templaters/administration/registration/esr-registration-statistics.template.php:22
+msgid "Confirmed"
+msgstr ""
+
+#: inc/enums/esr-registration-status.enum.php:27
+msgid "Canceled"
+msgstr ""
+
+#: inc/enums/esr-schedule-style.enum.php:23
+msgid "By Hours"
+msgstr ""
+
+#: inc/enums/esr-schedule-style.enum.php:26
+msgid "By Days"
+msgstr ""
+
+#: inc/enums/esr-schedule-style.enum.php:29
+msgid "By Hours Compact"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/esr-add-over-limit.template.php:16
+msgid "Add Over Limit"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:33
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:80
+#: inc/templaters/esr-registration.templater.php:119
+msgid "First Name"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:37
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:87
+msgid "Last Name"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:45
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:99
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:40
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:35
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:78
+#: inc/templaters/administration/students/esr-students.template.php:29
+#: inc/templaters/esr-registration.templater.php:280
+#: inc/templaters/helpers/esr-student-export.templater.php:70
+msgid "Phone"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:67
+msgid "Disable emails?"
+msgstr ""
+
+#: inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php:71
+msgid "Send"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:30
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:54
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:34
+#: inc/templaters/schedule/esr-schedule.helper.php:82
+msgid "Leaders"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:31
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php:55
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:35
+#: inc/templaters/schedule/esr-schedule.helper.php:92
+msgid "Followers"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-statistics.template.php:16
+#: inc/templaters/administration/payments/esr-payment-statistics.template.php:17
+#: inc/templaters/administration/registration/esr-registration-statistics.template.php:19
+msgid "Basic Statistics"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-statistics.template.php:19
+#: inc/templaters/helpers/esr-student-export.templater.php:89
+msgid "Registrations"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:21
+msgid "Hide passed courses"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:30
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:32
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:32
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:11
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:26
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:72
+#: inc/templaters/administration/students/esr-students.template.php:47
+#: inc/templaters/administration/students/esr-students.template.php:65
+#: inc/templaters/helpers/esr-student-export.templater.php:93
+#: inc/templaters/helpers/esr-student-export.templater.php:132
+#: inc/templaters/userinfo/payments/esr.templater.php:24
+msgid "Status"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:32
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:82
+#: inc/templaters/teacherinfo/esr-teacher-info-courses-table.templater.php:18
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:22
+msgid "Time"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:39
+msgid "First Teacher"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:40
+msgid "Second Teacher"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:63
+msgid "Course Full"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php:63
+msgid "Spots Available"
+msgstr ""
+
+#: inc/templaters/administration/course-in-numbers/esr-course-in-numbers.template.php:34
+msgid "Recount Statistics"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:45
+msgid "Edit Course"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:48
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:24
+msgid "Main Info"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:57
+msgid "Additional Info"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:75
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:33
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:45
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:30
+msgid "Title"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:85
+msgid "Subtitle"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:95
+msgid "Content"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:105
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:35
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:54
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:37
+#: inc/templaters/administration/students/esr-students.template.php:48
+#: inc/templaters/administration/students/esr-students.template.php:64
+#: inc/templaters/helpers/esr-student-export.templater.php:95
+#: inc/templaters/helpers/esr-student-export.templater.php:133
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:19
+#: inc/templaters/userinfo/payments/esr.templater.php:23
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:342
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:342
+msgid "Wave"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:108
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:131
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:155
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:185
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:275
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:372
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:392
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:57
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:88
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:55
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:88
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:117
+msgid "- select -"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:182
+msgid "Course Day"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:201
+msgid "Course Date From-To"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:205
+msgid "Define the time period when the course is running."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:215
+msgid "Course Time From-To"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:260
+msgid "Course Days"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:266
+msgid "Time From / To"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:284
+msgid "Add Day"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:307
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:322
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:337
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:349
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:373
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:388
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:400
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:425
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:445
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:463
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:492
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:541
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:579
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:99
+msgid "Remove"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:322
+msgid "Solo Class"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:324
+msgid "If selected, the Course does not have Leader and Follower roles. The default pairing mode is Confirm All, unless changed to Manual."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:359
+#: inc/templaters/esr-registration.templater.php:62
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:26
+msgid "Price"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:379
+msgid "Groups can be defined in Settings -> General -> Courses. Assigning courses to groups, you are able to define group bulk discounts as well as specific colors and filters in the Registration Form."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:399
+msgid "Levels can be defined in Settings -> General -> Courses. Assigning courses to levels, you are able to define specific colors and filters in the Registration Form."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:410
+msgid "Pairing Mode"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:430
+msgid "Couples Only"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:433
+msgid "If selected, students will be able to register only with a partner."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:443
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:139
+msgid "Disable Registrations"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:446
+msgid "If selected, registrations for this course will be disabled."
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php:459
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:120
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:135
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:110
+msgid "Save"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:18
+msgid "Add New Course"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:29
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:320
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:371
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:422
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:485
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:25
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:27
+msgid "ID"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:30
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:46
+#: inc/templaters/administration/payments/subblock/esr-payment-table-column-content.php:21
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:16
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:28
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:67
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:33
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:91
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:60
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:152
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:16
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:32
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:26
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:46
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:28
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:44
+msgid "Actions"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:34
+msgid "Date"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:51
+#: inc/workers/esr-ajax.worker.php:471
+msgid "Passed"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:51
+#: inc/workers/esr-ajax.worker.php:471
+msgid "Active"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:69
+#: inc/templaters/administration/payments/subblock/esr-payment-action-box.php:24
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:99
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:119
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:234
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:68
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:74
+msgid "Edit"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:75
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:74
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:80
+msgid "Duplicate"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:81
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:86
+msgid "Set passed"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:87
+msgid "Delete forever"
+msgstr ""
+
+#: inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php:93
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:92
+msgid "Set active"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:31
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:80
+#: inc/templaters/schedule/filters/esr-schedule-group.filter.php:21
+#: inc/templaters/schedule/filters/esr-schedule-level.filter.php:22
+msgid "All"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:33
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:81
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:29
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:32
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:35
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:73
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:17
+msgid "Student Name"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:35
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:83
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:45
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:37
+msgid "Variable Symbol"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:36
+msgid "Last Reminder Email Sent"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:37
+msgid "Last Confirmation Change"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:70
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:108
+msgid "Send emails"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:84
+msgid "Paid So Far"
+msgstr ""
+
+#: inc/templaters/administration/payment-emails/esr-payment-emails.template.php:85
+msgid "Full Price"
+msgstr ""
+
+#: inc/templaters/administration/payments/esr-payment-statistics.template.php:32
+msgid "Total"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-action-box.php:36
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:105
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:125
+msgid "Confirm Payment"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-action-box.php:48
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:132
+msgid "Forgive Payment"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:42
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:34
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:33
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:36
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:40
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:18
+msgid "Student Email"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:73
+msgid "Amount"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:89
+#: inc/templaters/helpers/esr-student-export.templater.php:135
+msgid "Payment"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:90
+msgid "Not paying this wave"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:131
+msgid "Send Payment Confirmation Email"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-form.php:146
+msgid "Save Payment"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-table-column-content.php:43
+#: inc/templaters/administration/payments/subblock/esr-payment-table-column-content.php:49
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:47
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:48
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:58
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:59
+#: inc/templaters/administration/payments/tabs/esr-payment-table-tab.template.php:67
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:110
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:111
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:118
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:119
+msgid "deleted student"
+msgstr ""
+
+#: inc/templaters/administration/payments/subblock/esr-payment-table-header.php:55
+#: inc/templaters/administration/payments/subblock/esr-payment-table.php:39
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:40
+#: inc/templaters/userinfo/payments/esr.templater.php:25
+msgid "To pay"
+msgstr ""
+
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:17
+msgid "Debts"
+msgstr ""
+
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:38
+msgid "Payment Type"
+msgstr ""
+
+#: inc/templaters/administration/payments/tabs/esr-payment-debts-tab.template.php:145
+msgid "Enable Registrations"
+msgstr ""
+
+#: inc/templaters/administration/payments/tabs/esr-payment-table-tab.template.php:21
+msgid "Add New Payment"
+msgstr ""
+
+#: inc/templaters/administration/registration/esr-registration-statistics.template.php:30
+msgid "Deleted"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:42
+msgid "If you want to change the email address, use the Users section in your WordPress. Follow the Documentation on ESR website for more details."
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:72
+msgid "Registered Partner Email"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:74
+msgid "This is the email address filled out in the registration form. If the Course uses Automatic pairing mode, the system will be waiting for a student with this email address to register and then pair them together."
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:85
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:83
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:23
+msgid "Dancing Role"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:105
+msgid "Paired Partner Email"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php:107
+msgid "The email address of a Student the system paired this Student with."
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:57
+msgid "Timestamp"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:85
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:24
+msgid "Registered Partner"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:87
+msgid "Paired Partner"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:249
+msgid "Confirm"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:255
+msgid "Cancel"
+msgstr ""
+
+#: inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php:261
+msgid "Remove Forever"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:16
+msgid "(ESR)"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:17
+msgid "All-in-One Registration Management Tool"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:19
+msgid "ESR is here to help you run your school effectively and with minimum time."
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:21
+msgid "How to get started? Follow the <strong><a href=\"%s\" target=\"_blank\">Quick-Start Guide</a></strong> to get up and running in no time!"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:23
+msgid "ESR provides a variety of additional modules to make your life even easier. Discounts, attendance tracking, promo codes, and much more - all available for free with your valid ESR license."
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:25
+msgid "Visit our <strong><a href=\"%s\" target=\"_blank\">website</a></strong> or get in touch with our team to learn more!"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:27
+msgid "Questions or ideas? Need help with the setup?"
+msgstr ""
+
+#: inc/templaters/administration/school/esr-school.templater.php:29
+msgid "Check the <strong><a href=\"%s\" target=\"_blank\">Documentation</a></strong> or let us know via <strong><a href=\"%s\" target=\"_blank\">Contact form</a></strong>."
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:125
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:168
+msgid "Background Color"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:126
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:169
+msgid "Background Opacity"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:127
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:170
+msgid "Border Color"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:128
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:171
+msgid "Border Width"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:164
+msgid "enable style"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:180
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:211
+msgid "Text Color"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:181
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:212
+msgid "Text Size"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:321
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:372
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:486
+#: inc/templaters/administration/students/esr-students.template.php:21
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:28
+msgid "Name"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:354
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:405
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:468
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:584
+msgid "Add"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:423
+msgid "Time From"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:424
+msgid "Time To"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:487
+msgid "Address"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:488
+msgid "Latitude"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:489
+msgid "Longitude"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:490
+msgid "Default Couples"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr-settings-helper.templater.php:491
+msgid "Default Solo"
+msgstr ""
+
+#: inc/templaters/administration/settings/esr.templater.php:27
+msgid "Easy School Registration Settings"
+msgstr ""
+
+#: inc/templaters/administration/students/esr-students.template.php:17
+msgid "Students Overview"
+msgstr ""
+
+#: inc/templaters/administration/students/esr-students.template.php:38
+msgid "Save Note"
+msgstr ""
+
+#: inc/templaters/administration/students/esr-students.template.php:42
+msgid "Registered Courses"
+msgstr ""
+
+#: inc/templaters/administration/students/esr-students.template.php:66
+#: inc/templaters/helpers/esr-student-export.templater.php:134
+msgid "To Pay"
+msgstr ""
+
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:19
+#: inc/templaters/user/esr-user.template.php:18
+msgid "Phone Number"
+msgstr ""
+
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:39
+#: inc/templaters/emails/esr-registration-email.template.php:74
+#: inc/templaters/esr-registration.templater.php:255
+msgid "Yes"
+msgstr ""
+
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:39
+#: inc/templaters/emails/esr-registration-email.template.php:74
+#: inc/templaters/esr-registration.templater.php:256
+msgid "No"
+msgstr ""
+
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:56
+msgid "Show"
+msgstr ""
+
+#: inc/templaters/administration/students/subblock/esr-students-table.subblock.php:63
+msgid "Send Export"
+msgstr ""
+
+#: inc/templaters/administration/teachers/esr-teachers.templater.php:25
+msgid "Add New Teacher"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:44
+msgid "Full Name"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:54
+#: inc/templaters/helpers/esr-student-export.templater.php:66
+msgid "Description"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:64
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:29
+#: inc/templaters/helpers/esr-student-export.templater.php:54
+msgid "Nickname"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:66
+msgid "Teacher nicknames are displayed in the Registration Form."
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:76
+msgid "Limit Registration View"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:78
+msgid "If selected, this Teacher will see only students who registered to his classes in the Registration section. The System User in the dropdown list above needs to be assigned."
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:114
+msgid "System User"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-edit-form.subblock.php:122
+msgid "If you want to use the Limit Registration View function, the Teacher needs to be a WordPress user."
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:80
+msgid "Deactivate"
+msgstr ""
+
+#: inc/templaters/administration/teachers/subblock/esr-teachers-table.subblock.php:86
+msgid "Activate"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:29
+msgid "Edit Wave"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:57
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:31
+msgid "Registration From"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:59
+msgid "Select time and date when the Registration Form becomes available. Before this date, studens will see only the text defined in the Settings -> Schedule/Registration -> Open/Closed."
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:71
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:32
+msgid "Registration To"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:73
+msgid "Select time and date when the Registration Form becomes not available. After this date, studens will see only the text defined in the Settings -> Schedule/Registration -> Open/Closed."
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:83
+msgid "Courses From"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:85
+msgid "Select time and date when the Courses assigned to this Wave start."
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:95
+msgid "Courses To"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-edit-form.subblock.php:97
+msgid "Select time and date when the Courses assigned to this Wave end."
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:17
+msgid "Add New Wave"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:33
+msgid "Download"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:57
+msgid "Choose calendar"
+msgstr ""
+
+#: inc/templaters/administration/waves/subblock/esr-waves-table.subblock.php:109
+msgid "Full calendar"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:56
+msgid "At least one course required to select."
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:61
+msgid "Registration info"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:97
+msgid "Wave price"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:106
+msgid "Final price"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:120
+msgid "Surname"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:220
+msgid "Register"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:239
+msgid "Dancing as"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:246
+msgid "- choose -"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:253
+msgid "Do you have partner?"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:260
+msgid "Partner email"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:306
+msgid "Confirm Email"
+msgstr ""
+
+#: inc/templaters/esr-registration.templater.php:318
+msgid "Emails are not same"
+msgstr ""
+
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:16
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:70
+msgid "No payment found"
+msgstr ""
+
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:44
+msgid "Discount"
+msgstr ""
+
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:52
+#: inc/templaters/frontend/student_payment/esr-student-payment.template.php:66
+msgid "Already paid"
+msgstr ""
+
+#: inc/templaters/helpers/esr-all-waves-select.templater.php:19
+msgid "Select Wave"
+msgstr ""
+
+#: inc/templaters/helpers/esr-all-waves-select.templater.php:29
+#: inc/templaters/helpers/esr-wave-courses-select.template.php:28
+msgid "Select"
+msgstr ""
+
+#: inc/templaters/helpers/esr-settings-tag.templater.php:236
+msgid "Role"
+msgstr ""
+
+#: inc/templaters/helpers/esr-settings-tag.templater.php:239
+#: inc/templaters/helpers/esr-student-export.templater.php:96
+msgid "Partner"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:22
+msgid "User data"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:26
+msgid "Display name"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:30
+msgid "User login"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:34
+msgid "User Email"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:38
+msgid "User Url"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:42
+msgid "User Registered"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:50
+msgid "User meta"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:58
+msgid "First name"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:62
+msgid "Last name"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:92
+msgid "Registration time"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:97
+msgid "Dancing As"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:98
+msgid "Dancing With"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:117
+msgid "No registrations"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:136
+msgid "Is Paying"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:137
+msgid "Is Voucher"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:138
+msgid "Insert Timestamp"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:139
+msgid "Confirm Timestamp"
+msgstr ""
+
+#: inc/templaters/helpers/esr-student-export.templater.php:157
+msgid "No payments"
+msgstr ""
+
+#: inc/templaters/helpers/esr-wave-courses-select.template.php:16
+msgid "Select Course"
+msgstr ""
+
+#: inc/templaters/schedule/esr-schedule.helper.php:72
+#: inc/templaters/schedule/esr-schedule.helper.php:74
+#: inc/templaters/schedule/esr-schedule.helper.php:84
+#: inc/templaters/schedule/esr-schedule.helper.php:86
+#: inc/templaters/schedule/esr-schedule.helper.php:94
+#: inc/templaters/schedule/esr-schedule.helper.php:96
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:37
+msgid "Full"
+msgstr ""
+
+#: inc/templaters/schedule/esr-schedule.helper.php:74
+#: inc/templaters/schedule/esr-schedule.helper.php:86
+#: inc/templaters/schedule/esr-schedule.helper.php:96
+msgid "left"
+msgstr ""
+
+#: inc/templaters/schedule/esr-schedule.helper.php:144
+msgid "Teacher"
+msgstr ""
+
+#: inc/templaters/teacherinfo/esr-teacher-info-courses-table.templater.php:20
+msgid "Teaching with"
+msgstr ""
+
+#: inc/templaters/teacherinfo/esr-teacher-info.template.php:25
+msgid "Download calendar"
+msgstr ""
+
+#: inc/templaters/userinfo/courses/esr.templater.php:25
+msgid "Download Calendar"
+msgstr ""
+
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:17
+msgid "Course Status"
+msgstr ""
+
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:18
+msgid "Registration Status"
+msgstr ""
+
+#: inc/templaters/userinfo/courses/subblock/esr-user-info-courses-table.templater.php:37
+msgid "Not full"
+msgstr ""
+
+#: inc/workers/esr-ajax.worker.php:194
+#: inc/workers/esr-ajax.worker.php:509
+msgid "Student with this email do not exist"
+msgstr ""
+
+#: inc/workers/esr-ajax.worker.php:202
+msgid "Partner with this email do not exist"
+msgstr ""
+
+#: inc/workers/esr-ajax.worker.php:211
+msgid "Course "
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:120
+msgid "Name is required."
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:123
+msgid "Surname is required."
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:126
+msgid "Email is required."
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:129
+msgid "Email is not valid"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:133
+msgid "Phone is required."
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:136
+msgid "You must choose at least one course."
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:143
+msgid "Partner email is not filled"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:146
+msgid "Partner email is not valid"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:149
+msgid "Please write your partner email not yours"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:154
+msgid "Partner is required for this course"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:158
+msgid "Please choose Dancing as"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:177
+msgid "Registration for this waves was closed"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:196
+msgid "Course is full"
+msgstr ""
+
+#: inc/workers/esr-registration.worker.php:201
+msgid "You have already registered this course"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:236
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:236
+msgid "Select a Wave"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:256
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:256
+msgid "Select a Style"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:276
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:276
+msgid "Select a Group"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:296
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:296
+msgid "Select a Hover Option"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:339
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:339
+msgid "Wave Schedule Settings"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:362
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:362
+msgid "Automatic Zoom"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:367
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:367
+msgid "Group Filter"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:373
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:373
+msgid "Hide Not Selected Groups"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:378
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:378
+msgid "Level Filter"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:383
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:383
+msgid "Hide Not Selected Levels"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:388
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:388
+msgid "Show Specific Group"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:394
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:394
+msgid "Show Hover"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:418
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:418
+msgid "The selected form has been deleted or trashed. Please select a new form."
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:459
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:459
+msgid "You must have at least one wave to use the block."
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:537
+msgid "ESR Registration"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-course-registration-block.js:538
+msgid "Select a wave below to add registration to your page."
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:537
+msgid "ESR Schedule"
+msgstr ""
+
+#: inc/assets/admin/gutenberg/esr-wave-schedule-block.js:538
+msgid "Select a wave below to add schedule to your page."
+msgstr ""
