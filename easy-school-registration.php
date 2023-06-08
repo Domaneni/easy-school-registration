@@ -364,6 +364,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/courses/esr-courses.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/courses/subblock/esr-courses-edit-form.subblock.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/courses/subblock/esr-courses-table.subblock.php';
+			
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payment-emails/esr-payment-emails.template.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payments/esr-payments.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payments/esr-payment-statistics.template.php';
@@ -373,10 +374,14 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payments/subblock/esr-payment-table-header.php';
             require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payments/subblock/esr-payment-action-box.php';
             require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/payments/subblock/esr-payment-table-column-content.php';
+
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/esr-registrations.template.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/esr-registration-statistics.template.php';
+			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/subblock/esr-registration-table-column-content.php';	
+			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/subblock/esr-registration-table-header.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/subblock/esr-registration-table.subblock.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/registration/subblock/esr-registration-form.subblock.php';
+
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/settings/esr.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/settings/esr-settings-helper.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/school/esr-school.templater.php';
