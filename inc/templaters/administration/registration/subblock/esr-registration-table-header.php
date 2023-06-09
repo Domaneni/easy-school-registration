@@ -48,9 +48,18 @@ class ESR_Registration_Table_Header {
     }
 
     public static function esr_print_student_name_header_callback ($wave) {
+        $separate_name_enabled = intval( ESR()->settings->esr_get_option( 'show_separated_names_enabled', -1 ) ) != -1;
+
+        if ($separate_name_enabled) {
+        ?>
+            <th class="esr-filter-disabled"><?php esc_html_e( 'Student Name', 'easy-school-registration' ); ?></th>
+            <th class="esr-filter-disabled"><?php esc_html_e( 'Student Surname', 'easy-school-registration' ); ?></th>
+        <?php
+        } else {
         ?>
             <th class="esr-filter-disabled"><?php esc_html_e( 'Student Name', 'easy-school-registration' ); ?></th>
         <?php
+        }
     }
 
     public static function esr_print_email_header_callback ($wave) {

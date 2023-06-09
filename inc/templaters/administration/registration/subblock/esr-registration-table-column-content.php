@@ -58,9 +58,23 @@ class ESR_Registration_Table_Column_Content {
 
     public static function esr_print_student_name_content_callback ($wave, $registration, $user_data) {
         $student_name  = isset( $user_data[ $registration->user_id ] ) ? $user_data[ $registration->user_id ]->display_name : esc_html__( 'deleted student', 'easy-school-registration' );
-			
+        $separate_name_enabled = intval( ESR()->settings->esr_get_option( 'show_separated_names_enabled', -1 ) ) != -1;
+
+        if ($separate_name_enabled) {
+            $first_name  = isset( $user_data[ $registration->user_id ] ) ? $user_data[ $registration->user_id ]->first_name : esc_html__( 'deleted student', 'easy-school-registration' );
+            $last_name  = isset( $user_data[ $registration->user_id ] ) ? $user_data[ $registration->user_id ]->last_name : esc_html__( 'deleted student', 'easy-school-registration' );
+
         ?>
-        <td class="student-name"><?php echo esc_html($student_name); ?></td>
+            <td class="student-name"><?php echo esc_html($first_name); ?></td>
+            <td class="student-name"><?php echo esc_html($last_name); ?></td>
+        <?php
+        } else {
+        ?>
+            <td class="student-name"><?php echo esc_html($student_name); ?></td>
+        <?php
+        }
+
+        ?>
         <?php
     }
 

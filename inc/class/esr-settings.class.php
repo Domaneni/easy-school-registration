@@ -190,6 +190,13 @@ class ESR_Settings {
 						'type' => 'checkbox',
 						'std'  => false,
 					],
+					'show_separated_names_enabled' => [
+						'id'   => 'show_separated_names_enabled',
+						'name' => esc_html__( 'User Name', 'easy-school-registration' ),
+						'desc' => esc_html__( 'If enabled, User Name will be separated to two columns.', 'easy-school-registration' ),
+						'type' => 'checkbox',
+						'std'  => false,
+					],
 				],
 				'payment'           => [
 					'show_courses'           => [

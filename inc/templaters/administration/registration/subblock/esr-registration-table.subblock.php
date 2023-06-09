@@ -15,8 +15,10 @@ class ESR_Registrations_Table_Subblock_Templater {
 		$multiple_dates_enabled = intval( ESR()->settings->esr_get_option( 'multiple_dates', - 1 ) ) !== - 1;
 		$show_user_note_enabled = intval( ESR()->settings->esr_get_option( 'show_user_note_enabled', - 1 ) ) !== - 1;
 		$show_payment_enabled   = intval( ESR()->settings->esr_get_option( 'show_payment_enabled', - 1 ) ) !== - 1;
+		$separate_name_enabled = intval( ESR()->settings->esr_get_option( 'show_separated_names_enabled', -1 ) ) != -1;
 
-		$users_data = get_users( [ 'fields' => [ 'ID', 'display_name', 'user_email' ] ] );
+
+		$users_data = get_users( [ 'fields' => [ 'ID', 'display_name', 'user_email', 'user_firstname' ] ] );
 		$user_data  = [];
 
 		foreach ( $users_data as $u ) {
@@ -35,6 +37,16 @@ class ESR_Registrations_Table_Subblock_Templater {
 					$user_data[ $u->ID ]->user_note = $user_note[0];
 				}
 			}
+
+			if ( $separate_name_enabled && $user_data[ $u->ID ] ) {
+				$firstName = get_user_meta($u->ID, 'first_name', true);
+				$lastName = get_user_meta($u->ID, 'last_name', true);
+
+				$user_data[ $u->ID ]->first_name = $firstName;
+				$user_data[ $u->ID ]->last_name = $lastName;
+				
+			}
+
 		}
 
 		$teacher = ESR()->teacher->get_teacher_data_by_user( get_current_user_id() );
