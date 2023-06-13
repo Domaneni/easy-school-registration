@@ -164,6 +164,12 @@ class ESR_Settings {
 						'type' => 'checkbox',
 						'std'  => false,
 					],
+					'disable_couples' => [
+						'id'   => 'disable_couples',
+						'name' => esc_html__( 'Disable couples registration', 'easy-school-registration' ),
+						'type' => 'checkbox',
+						'std'  => false,
+					],
 				],
 				'course_in_numbers' => [
 					'courses_schedule_style' => [
@@ -948,7 +954,7 @@ class ESR_Settings {
 
 	public function esr_get_option( $key = '', $default = false ) {
 		global $esr_settings;
-		$value = ! empty( $esr_settings[ $key ] ) ? $esr_settings[ $key ] : $default;
+		$value = !empty( $esr_settings[ $key ] ) ? $esr_settings[ $key ] : $default;
 		$value = apply_filters( 'esr_get_option', $value, $key, $default );
 
 		return apply_filters( 'esr_get_option_' . $key, $value, $key, $default );

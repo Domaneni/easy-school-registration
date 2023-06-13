@@ -13,26 +13,39 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_hall_key']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_teacher_first']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_teacher_second']);
+
 		if (intval(ESR()->settings->esr_get_option('multiple_dates', -1)) === -1) {
 			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_day']);
 		}
+
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_date']);
+
 		if (intval(ESR()->settings->esr_get_option('multiple_dates', -1)) === -1) {
 			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_time']);
 		}
+
 		if (intval(ESR()->settings->esr_get_option('multiple_dates', -1)) === 1) {
 			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_days']);
 		}
+
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_is_solo']);
-		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_leaders']);
-		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_followers']);
+
+		if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_leaders']);
+			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_followers']);
+		}
+
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_solo']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_price']);
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_sub_header']);
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_group_id']);
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_level_id']);
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_pairing_mode']);
-		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_enforce_partner']);
+
+		if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+			add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_enforce_partner']);
+		}
+
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_course_settings']);
 		add_action('esr_course_edit_form_submit', [get_called_class(), 'input_submit'], 10, 2);
 	}
@@ -317,10 +330,11 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 
 
 	public static function input_is_solo($course) {
+		$default_solo = intval(ESR()->settings->esr_get_option('disable_couples', -1)) === 1;
 		?>
-		<tr>
+		<tr <?= ($default_solo ? 'style="display:none;"' : '') ?>>
 			<th><?php esc_html_e('Solo Class', 'easy-school-registration'); ?></th>
-			<td><input type="checkbox" name="is_solo" class="esr-toggle-on-change" <?php checked($course !== null ? intval($course->is_solo) : 0, 1) ?> data-show=".max_solo" data-hide=".max_leaders, .max_followers">
+			<td><input type="checkbox" name="is_solo" class="esr-toggle-on-change" <?php checked($course !== null ? intval($course->is_solo) : $default_solo, 1) ?> data-show=".max_solo" data-hide=".max_leaders, .max_followers">
 				<?php ESR_Tooltip_Templater_Helper::print_tooltip(esc_html__('If selected, the Course does not have Leader and Follower roles. The default pairing mode is Confirm All, unless changed to Manual.', 'easy-school-registration')); ?>
 			</td>
 		</tr>
@@ -349,7 +363,9 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 
 
 	public static function input_max_solo($course) {
-		self::add_number($course, 'Max Attendance', 'max_solo', 'show_solo', $course !== null ? !$course->is_solo : true);
+		$default_solo = intval(ESR()->settings->esr_get_option('disable_couples', -1)) === 1;
+
+		self::add_number($course, 'Max Attendance', 'max_solo', 'show_solo', $course !== null ? !$course->is_solo : !$default_solo);
 	}
 
 
