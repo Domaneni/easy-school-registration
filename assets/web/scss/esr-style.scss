@@ -7,6 +7,10 @@
 	height: 0;
 }
 
+:root {
+	--esr-color--error: #f00;
+}
+
 .esr-clearfix {
 	display: inline-block;
 }
@@ -26,7 +30,7 @@
 }
 
 .esr-error {
-	color: #f00;
+	color: var(--esr-color--error);
 }
 
 th.required::after {
@@ -35,7 +39,7 @@ th.required::after {
 }
 
 input.error {
-	border: 1px solid #f00;
+	border: 1px solid var(--esr-color--error);
 }
 
 .esr-courses-to-registration {
@@ -157,7 +161,7 @@ input.error {
 }
 
 .esr-courses-to-registration .esr-course.esr-remove {
-	background-color: #fbc934;
+	background-color: var(--esr-bg-course-remove, #fbc934);
 	color: #454545;
 }
 
