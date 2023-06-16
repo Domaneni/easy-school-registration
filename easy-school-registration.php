@@ -454,7 +454,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
          * @return void
          */
         private function init() {
-            add_action( 'plugins_loaded', array( $this, 'load_text_domain' ), 99 );
+            add_action( 'init', array( $this, 'load_text_domain' ), 99 );
         }
 
 
@@ -465,13 +465,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
          * @return void
          */
 		public function load_text_domain() {
-            $locale = apply_filters( 'plugin_locale', get_locale(), 'easy-school-registration' );
-
-            $mofile = sprintf( '%1$s-%2$s.mo', 'easy-school-registration', $locale );
-            $mofile_local  = ESR_PLUGIN_DIR . 'languages/' . $mofile;
-
-            load_textdomain( 'easy-school-registration', $mofile_local );
-            load_plugin_textdomain( 'easy-school-registration', false, dirname( plugin_basename( ESR_PLUGIN_DIR ) ) . '/languages/' );
+            load_plugin_textdomain( 'easy-school-registration', false, dirname(plugin_basename(__FILE__)) . '/languages/' );
 		}
 
 	}
