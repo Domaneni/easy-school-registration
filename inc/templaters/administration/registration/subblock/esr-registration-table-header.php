@@ -89,17 +89,21 @@ class ESR_Registration_Table_Header {
     }
 
     public static function esr_print_dance_role_header_callback ($wave) {
-        ?><th class="no-sort"><?php esc_html_e( 'Dancing Role', 'easy-school-registration' ); ?></th><?php
+        if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+            ?><th class="no-sort"><?php esc_html_e( 'Dancing Role', 'easy-school-registration' ); ?></th><?php
+        }
     }
 
     public static function esr_print_registered_partner_header_callback ($wave) {
-        if ( current_user_can( 'esr_show_student_emails' ) ) { ?>
+        if ( current_user_can( 'esr_show_student_emails' ) && (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) ) { ?>
             <th class="esr-filter-disabled"><?php esc_html_e( 'Registered Partner', 'easy-school-registration' ); ?></th>
         <?php }
     }
 
     public static function esr_print_paired_partner_header_callback ($wave) {
-        ?><th class="esr-filter-disabled"><?php esc_html_e( 'Paired Partner', 'easy-school-registration' ); ?></th><?php
+        if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+            ?><th class="esr-filter-disabled"><?php esc_html_e( 'Paired Partner', 'easy-school-registration' ); ?></th><?php
+        }
     }
 
     public static function esr_print_free_registration_header_callback ($wave) {

@@ -6,3 +6,4 @@ modules/fio_payments/exports/
 /vendor
 tests2/
 tests/tmp/
+/temp/

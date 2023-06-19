@@ -8,7 +8,9 @@ if (!defined('ABSPATH')) {
 class ESR_Courses_Edit_Form_Subblock_Templater {
 
 	public function __construct() {
-		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_title']);
+        $disable_couples = intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1;
+
+        add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_title']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_wave_id']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_hall_key']);
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_teacher_first']);
@@ -30,7 +32,7 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 
 		add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_is_solo']);
 
-		if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+		if ($disable_couples) {
 			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_leaders']);
 			add_action('esr_course_edit_main_form_input', [get_called_class(), 'input_max_followers']);
 		}
@@ -42,7 +44,7 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_level_id']);
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_pairing_mode']);
 
-		if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) {
+		if ($disable_couples) {
 			add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_enforce_partner']);
 		}
 
