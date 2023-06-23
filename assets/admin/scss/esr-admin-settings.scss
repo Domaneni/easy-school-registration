@@ -650,6 +650,14 @@ table.dataTable thead {
             margin-top: 0;
         }
     }
+
+    .esr-settings {
+        .form-table {
+            th {
+                text-transform: capitalize;
+            }
+        }
+    }
 }
 
 .esr-settings-description {

@@ -143,7 +143,7 @@ class ESR_Enqueue_Scripts {
 
 
 	public static function esr_load_other_default_scripts() {
-		wp_enqueue_style( 'esr_admin_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-admin-settings.css', [], ESR_VERSION );
+		wp_enqueue_style( 'esr_admin_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-admin-settings.min.css', [], ESR_VERSION );
 
 		//wp_enqueue_style( 'esr_admin_bootstrap_style', ESR_PLUGIN_URL . 'libs/bootstrap/css/bootstrap-ofic.css', [], ESR_VERSION );
 		//wp_enqueue_script( 'esr_bootstrap_script', ESR_PLUGIN_URL . 'libs/bootstrap/js/bootstrap.min.js', [ 'jquery' ], ESR_VERSION );
@@ -215,7 +215,7 @@ class ESR_Enqueue_Scripts {
 
 
 	public static function esr_scripts_admin_callback() {
-		wp_enqueue_style( 'esr_admin_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-admin-settings.css', [], ESR_VERSION );
+		wp_enqueue_style( 'esr_admin_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-admin-settings.min.css', [], ESR_VERSION );
 	}
 
 
@@ -233,7 +233,7 @@ class ESR_Enqueue_Scripts {
 	public static function esr_enqueue_block_editor_assets_callbacks() {
 		wp_enqueue_script( 'esr_wave_schedule_block_form', ESR_PLUGIN_URL . 'inc/assets/admin/gutenberg/esr-wave-schedule-block.js', array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-i18n', 'wp-editor' ), ESR_VERSION, false );
 		wp_enqueue_script( 'esr_course_registration_block_form', ESR_PLUGIN_URL . 'inc/assets/admin/gutenberg/esr-course-registration-block.js', array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-i18n', 'wp-editor' ), ESR_VERSION, false );
-		wp_enqueue_style( 'esr_wave_schedule_block_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-blocks-styles.css', [], ESR_VERSION );
+		wp_enqueue_style( 'esr_wave_schedule_block_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-blocks-styles.min.css', [], ESR_VERSION );
 		wp_localize_script( 'esr_wave_schedule_block_form', 'esr_block_form', [
 			'waves' => ESR()->wave->esr_get_active_waves_data(),
 			'styles' => ESR()->schedule_style->get_items_for_gutenberg(),
