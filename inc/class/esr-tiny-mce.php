@@ -20,7 +20,7 @@ add_filter('mce_buttons', 'esr_register_tinymce_button');
 
 
 function esr_add_mce_scripts() {
-	wp_enqueue_style('esr_mce_button_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-tinymce.css', [], ESR_VERSION);
+	wp_enqueue_style('esr_mce_button_style', ESR_PLUGIN_URL . 'inc/assets/admin/css/esr-tinymce.min.css', [], ESR_VERSION);
 	wp_localize_script('esr_tinymce_script', 'esr_tinymce_ajax_object', ['ajaxurl' => admin_url('admin-ajax.php')]);
 }
 
