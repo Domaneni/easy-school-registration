@@ -7,3 +7,5 @@ modules/fio_payments/exports/
 tests2/
 tests/tmp/
 /temp/
+inc/assets/admin/css/*.js
+inc/assets/web/css/*.js
