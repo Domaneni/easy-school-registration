@@ -142,6 +142,10 @@ class ESR_Registration_Table_Column_Content {
     }
 
     public static function esr_print_dance_role_content_callback ($wave, $registration) {
+        if (!(intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1)) {
+            return;
+        }
+
         ?>
             <td class="dancing-as"
                 data-as="<?php echo esc_attr($registration->dancing_as); ?>">
@@ -151,12 +155,20 @@ class ESR_Registration_Table_Column_Content {
     }
 
     public static function esr_print_registered_partner_content_callback ($wave, $registration) {
+        if (!(intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1)) {
+            return;
+        }
+
         if ( current_user_can( 'esr_show_student_emails' ) ) { ?>
             <td class="dancing-with"><?php echo esc_html($registration->dancing_with); ?></td>
         <?php }
     }
 
     public static function esr_print_paired_partner_content_callback ($wave, $registration, $user_data) {
+        if (!(intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1)) {
+            return;
+        }
+
         $partner_name  = '';
         $partner_email = '';
         if ( $registration->partner_id != null ) {

@@ -80,6 +80,10 @@ class ESR_Course_Worker {
 			}
 		}
 
+        if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === 1) {
+            $return_data['is_solo'] = true;
+        }
+
 		if ((intval(ESR()->settings->esr_get_option('multiple_dates', -1)) === 1) && isset($data['course-days'])) {
 			$date                     = reset($data['course-days']);
 			$return_data['day']       = $this->sanitize('int', $date['day']);
