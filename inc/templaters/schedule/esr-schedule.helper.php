@@ -178,9 +178,7 @@ class ESR_Schedule_Helper {
 										$default_css_values = $value['std'];
 										$rule = $value['selector'] . '{';
 
-										if (isset($css_value['background_color']) && ($css_value['background_color'] !== '')) {
-											$rule .= 'background-color:' . self::hex2rgba(isset($css_value['background_color']) ? $css_value['background_color'] : $default_css_values['background_color'], isset($css_value['background_opacity']) ? (float) $css_value['background_opacity'] : (float) $default_css_values['background_opacity']) . ';';
-										}
+										$rule .= self::esr_get_background_style_rule($esr_settings, $value);
 										if (isset($css_value['border_color']) && ($css_value['border_color'] !== '')) {
 											$rule .= 'border: ' . (isset($css_value['border_width']) ? $css_value['border_width'] : $default_css_values['border_width']) . 'px solid ' . (isset($css_value['border_color']) ? $css_value['border_color'] : $default_css_values['border_color']) . ';';
 										}
@@ -195,9 +193,7 @@ class ESR_Schedule_Helper {
 
 										$rule = $value['selector'] . '{';
 
-										if (isset($default_css_values['color']) || isset($css_value['color'])) {
-											$rule .= 'color:' . (isset($css_value['color']) ? $css_value['color'] : $default_css_values['color']) . ';';
-										}
+										$rule .= self::esr_get_font_color_style_rule($esr_settings, $value);
 
 										if (isset($default_css_values['size']) || isset($css_value['size'])) {
 											$rule .= 'font-size: ' . (isset($css_value['size']) ? $css_value['size'] : $default_css_values['size']) . 'px;';
@@ -302,6 +298,38 @@ class ESR_Schedule_Helper {
 
 		//Return rgb(a) color string
 		return $output;
+	}
+
+	private static function esr_get_background_style_rule($settings, $value) {
+		$default_settings = $value['std'];
+		$rule = '';
+
+		if (isset($settings['background_color']) && ($settings['background_color'] !== '')) {
+			$css_value = self::hex2rgba(isset($settings['background_color']) ? $settings['background_color'] : $default_settings['background_color'], isset($settings['background_opacity']) ? (float) $settings['background_opacity'] : (float) $default_settings['background_opacity']);
+			$rule .= 'background-color:' . $css_value . ';';
+
+			if (!empty($value['var']['background_color'])) {
+				$rule .= $value['var']['background_color'] . ':' . $css_value . ';';
+			}
+		}
+
+		return $rule;
+	}
+
+	private static function esr_get_font_color_style_rule($settings, $value) {
+		$default_settings = $value['std'];
+
+		if (!isset($default_settings['color']) && !isset($settings['color'])) {
+			return '';
+		}
+
+		$css_value = (isset($settings['color']) ? $settings['color'] : $default_settings['color']);
+
+		if (!empty($value['var']['color'])) {
+			return $value['var']['color'] . ':' . $css_value . ';';
+		}
+
+		return 'color:' . $css_value . ';';
 	}
 
 	private function esr_get_course_classes( $course, $for_registration, $course_enabled ) {
