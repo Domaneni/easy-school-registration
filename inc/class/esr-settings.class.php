@@ -161,14 +161,14 @@ class ESR_Settings {
 					'multiple_dates' => [
 						'id'   => 'multiple_dates',
 						'name' => esc_html__( 'Enable Multiple Dates', 'easy-school-registration' ),
-                        'desc' => esc_html__( 'If enabled, you will be able to select multiple dates for course.', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, you will be able to select multiple dates for course', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => false,
 					],
 					'disable_couples' => [
 						'id'   => 'disable_couples',
 						'name' => esc_html__( 'Disable couples registration', 'easy-school-registration' ),
-                        'desc' => esc_html__( 'If enabled, courses will hav only Solo type option enabled', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, courses will have only Solo type option enabled', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => false,
 					],

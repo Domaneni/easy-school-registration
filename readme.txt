@@ -3,7 +3,7 @@ Contributors: domaneni
 Donate link: https://ko-fi.com/domaneni
 Tags: school, registration, dance, easy registration
 Tested up to: 6.2.2
-Stable Tag: 3.9.4
+Stable Tag: 3.9.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,6 +62,14 @@ From your WordPress dashboard
 6. Styling setting page
 
 == Changelog ==
+
+= 3.9.5 2023-06-26 =
+
+* Fix - Registration enforce partner was wrongly validated
+* Fix - Already registered override function was wrongly validated
+* Add - Option to split student name to first name and surname in admin tables
+* Add - Option to hide couples settings and data in administration
+* Add - Support for variables in styling settings
 
 = 3.9.4 2023-06-05 =
 
