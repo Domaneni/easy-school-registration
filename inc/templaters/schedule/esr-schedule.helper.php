@@ -27,6 +27,9 @@ class ESR_Schedule_Helper {
 		if ( isset( $course->settings['group_preload'] ) && ( intval( $course->settings['group_preload'] ) != $course->group_id ) ) {
 			$styles [] = 'opacity: 0.4;';
 		}
+
+        $partner_enforce = $course->enforce_partner || (intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) === 1);
+
 		?>
 
 		<div
@@ -42,7 +45,7 @@ class ESR_Schedule_Helper {
 				data-day="<?php echo esc_attr(ESR()->day->get_day_title( $course->day )); ?>"
 				data-start="<?php echo esc_attr($course->time_from); ?>"
 				data-price="<?php echo esc_attr($course->real_price); ?>"
-				data-enforce-partner="<?php echo esc_attr($course->enforce_partner); ?>"
+				data-enforce-partner="<?php echo esc_attr($partner_enforce); ?>"
 			    <?php apply_filters( 'esr_schedule_course_data', $course->id ); ?>
                 <?php if ( ! boolval( $course->is_solo ) ) { ?>
                     data-leader-enabled="<?php echo esc_attr(( $leader_registration_enabled ? 1 : 0 )); ?>"

@@ -248,7 +248,7 @@ class ESR_Registration_Templater {
 						<option value="<?php echo esc_attr(ESR_Dancing_As::FOLLOWER); ?>"><?php echo (empty( $follower_settings_label ) ? esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::FOLLOWER )) : esc_html($follower_settings_label) ); ?></option>
 					</select>
 				</div>
-				<?php if ( intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) !== - 1 ) { ?>
+				<?php if ( intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) !== 1 ) { ?>
 					<div class="esr-info-row esr-row-choose-partner">
 						<span class="esr-info-row-label"><?php esc_html_e( 'Do you have partner?', 'easy-school-registration' ); ?></span>
 						<div class="esr-info-row-input">
@@ -256,11 +256,11 @@ class ESR_Registration_Templater {
 							<label class="esr-choose-partner"><input type="radio" class="choose_partner" name="choose-partner-%course-id%" value="0" required> <?php esc_html_e( 'No', 'easy-school-registration' ); ?></label>
 						</div>
 					</div>
+                <?php } ?>
 					<div class="esr-info-row esr-row-dancing-with" style="display: none;">
 						<span class="esr-info-row-label"><?php esc_html_e( 'Partner email', 'easy-school-registration' ); ?>:</span>
 						<input class="esr-info-row-input esr-dancing-with" type="email" name="dancing-with">
 					</div>
-				<?php } ?>
 			</div>
 			<div class="price esr-hide-mobile" data-price="%course-price%"><?php echo esc_html(ESR()->currency->prepare_price( '%course-price%' )); ?></div>
 			<input type="hidden" name="course_id" value="%course-id%">
