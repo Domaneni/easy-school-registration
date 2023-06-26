@@ -383,6 +383,8 @@ class ESR_Ajax_Worker {
 		$json_data = [
 			'student'    => [
 				'name'  => $student->display_name,
+                'first_name'  => $student->first_name,
+                'last_name'  => $student->last_name,
 				'email' => $student->user_email
 			],
 			'dancing_as' => [

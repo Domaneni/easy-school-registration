@@ -65,8 +65,8 @@ class ESR_Registration_Table_Column_Content {
             $last_name  = isset( $user_data[ $registration->user_id ] ) ? $user_data[ $registration->user_id ]->last_name : esc_html__( 'deleted student', 'easy-school-registration' );
 
         ?>
-            <td class="student-name"><?php echo esc_html($first_name); ?></td>
-            <td class="student-name"><?php echo esc_html($last_name); ?></td>
+            <td class="student-name first-name"><?php echo esc_html($first_name); ?></td>
+            <td class="student-name last-name"><?php echo esc_html($last_name); ?></td>
         <?php
         } else {
         ?>
