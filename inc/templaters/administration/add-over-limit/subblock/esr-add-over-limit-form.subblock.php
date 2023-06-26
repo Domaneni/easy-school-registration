@@ -16,7 +16,10 @@ class ESR_Add_Over_Limit_Subblock_Templater
 			$worker_add_over_limit->process_form($_POST);
 		}
 
-		$selected_wave = apply_filters('esr_all_waves_select_get', []);
+
+        $disable_couples = !(intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1);
+
+        $selected_wave = apply_filters('esr_all_waves_select_get', []);
 		?>
 		<div class="wrap esr-settings">
 			<div class="esr_controls">
@@ -27,7 +30,15 @@ class ESR_Add_Over_Limit_Subblock_Templater
                   data-parsley-validate="" class="form-horizontal form-label-left">
 
                 <div class="esr-column">
-                    <h2><?php esc_html_e('Leader', 'easy-school-registration'); ?></h2>
+                    <h2>
+                        <?php
+                            if ($disable_couples) {
+                                esc_html_e('Student', 'easy-school-registration');
+                            } else {
+                                esc_html_e('Leader', 'easy-school-registration');
+                            }
+                        ?>
+                    </h2>
                     <div class="form-fields">
                         <div class="form-row">
                             <label><?php esc_html_e('First Name', 'easy-school-registration'); ?> <span class="required">*</span></label>
@@ -73,43 +84,45 @@ class ESR_Add_Over_Limit_Subblock_Templater
                         <?php do_action('esr_add_leader_over_limit_form'); ?>
                     </div>
                 </div>
-                <div class="esr-column">
-                    <h2><?php esc_html_e('Follower', 'easy-school-registration'); ?></h2>
-                    <div class="form-fields">
-                        <div class="form-row">
-                            <label><?php esc_html_e('First Name', 'easy-school-registration'); ?>
-                                <span class="required">*</span></label>
-
-                            <input type="text" id="first-name" name="esr_follower_name"
-                                   class="form-control col-md-7 col-xs-12">
-                        </div>
-                        <div class="form-row">
-                            <label><?php esc_html_e('Last Name', 'easy-school-registration'); ?> <span
-                                        class="required">*</span></label>
-                            <input type="text" id="last-name" name="esr_follower_surname"
-                                   class="form-control col-md-7 col-xs-12">
-                        </div>
-                        <div class="form-row">
-                            <label><?php esc_html_e('Email', 'easy-school-registration'); ?>
-                                <span class="required">*</span></label>
-                            <input id="follower-email" class="form-control col-md-7 col-xs-12" type="email"
-                                   name="esr_follower_email">
-                        </div>
-                        <div class="form-row">
-                            <label><?php esc_html_e('Phone', 'easy-school-registration'); ?></label>
-
-                            <input id="follower-phone" class="form-control col-md-7 col-xs-12" type="text"
-                                   name="esr_follower_phone">
-                        </div>
-                        <?php if (intval(ESR()->settings->esr_get_option('free_registrations_enabled', -1)) != -1) { ?>
+                <?php if (intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1) { ?>
+                    <div class="esr-column">
+                        <h2><?php esc_html_e('Follower', 'easy-school-registration'); ?></h2>
+                        <div class="form-fields">
                             <div class="form-row">
-                                <label><?php esc_html_e('Free Course', 'easy-school-registration'); ?></label>
-                                    <input id="follower-free-course" class="form-control col-md-7 col-xs-12" type="checkbox" name="esr_follower_free_registration">
+                                <label><?php esc_html_e('First Name', 'easy-school-registration'); ?>
+                                    <span class="required">*</span></label>
+
+                                <input type="text" id="first-name" name="esr_follower_name"
+                                       class="form-control col-md-7 col-xs-12">
                             </div>
-                        <?php } ?>
-                        <?php do_action('esr_add_follower_over_limit_form'); ?>
+                            <div class="form-row">
+                                <label><?php esc_html_e('Last Name', 'easy-school-registration'); ?> <span
+                                            class="required">*</span></label>
+                                <input type="text" id="last-name" name="esr_follower_surname"
+                                       class="form-control col-md-7 col-xs-12">
+                            </div>
+                            <div class="form-row">
+                                <label><?php esc_html_e('Email', 'easy-school-registration'); ?>
+                                    <span class="required">*</span></label>
+                                <input id="follower-email" class="form-control col-md-7 col-xs-12" type="email"
+                                       name="esr_follower_email">
+                            </div>
+                            <div class="form-row">
+                                <label><?php esc_html_e('Phone', 'easy-school-registration'); ?></label>
+
+                                <input id="follower-phone" class="form-control col-md-7 col-xs-12" type="text"
+                                       name="esr_follower_phone">
+                            </div>
+                            <?php if (intval(ESR()->settings->esr_get_option('free_registrations_enabled', -1)) != -1) { ?>
+                                <div class="form-row">
+                                    <label><?php esc_html_e('Free Course', 'easy-school-registration'); ?></label>
+                                        <input id="follower-free-course" class="form-control col-md-7 col-xs-12" type="checkbox" name="esr_follower_free_registration">
+                                </div>
+                            <?php } ?>
+                            <?php do_action('esr_add_follower_over_limit_form'); ?>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
             </form>
 		</div>
 		<?php

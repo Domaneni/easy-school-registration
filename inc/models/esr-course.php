@@ -167,7 +167,7 @@ class ESR_Course
 	{
 		global $wpdb;
 
-        if (ESR()->settings->esr_get_option('allow_multiple_registrations', false)) {
+        if (intval(ESR()->settings->esr_get_option('allow_multiple_registrations', -1)) === 1) {
             return false;
         }
 

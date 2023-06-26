@@ -161,6 +161,14 @@ class ESR_Settings {
 					'multiple_dates' => [
 						'id'   => 'multiple_dates',
 						'name' => esc_html__( 'Enable Multiple Dates', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, you will be able to select multiple dates for course.', 'easy-school-registration' ),
+						'type' => 'checkbox',
+						'std'  => false,
+					],
+					'disable_couples' => [
+						'id'   => 'disable_couples',
+						'name' => esc_html__( 'Disable couples registration', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, courses will hav only Solo type option enabled', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => false,
 					],
@@ -187,6 +195,13 @@ class ESR_Settings {
 						'id'   => 'show_user_note_enabled',
 						'name' => esc_html__( 'User Note', 'easy-school-registration' ),
 						'desc' => esc_html__( 'If enabled, User Note will be shown in registrations tab.', 'easy-school-registration' ),
+						'type' => 'checkbox',
+						'std'  => false,
+					],
+					'show_separated_names_enabled' => [
+						'id'   => 'show_separated_names_enabled',
+						'name' => esc_html__( 'Split user name', 'easy-school-registration' ),
+						'desc' => esc_html__( 'If enabled, User Name will be separated to two columns.', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => false,
 					],
@@ -941,7 +956,7 @@ class ESR_Settings {
 
 	public function esr_get_option( $key = '', $default = false ) {
 		global $esr_settings;
-		$value = ! empty( $esr_settings[ $key ] ) ? $esr_settings[ $key ] : $default;
+		$value = !empty( $esr_settings[ $key ] ) ? $esr_settings[ $key ] : $default;
 		$value = apply_filters( 'esr_get_option', $value, $key, $default );
 
 		return apply_filters( 'esr_get_option_' . $key, $value, $key, $default );

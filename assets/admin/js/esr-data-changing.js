@@ -61,7 +61,13 @@ jQuery(function ($) {
 
           if (newData.hasOwnProperty("student")) {
             if (newData.student.hasOwnProperty("name")) {
-              editRow.find(".student-name").html(newData.student.name);
+              editRow.find(".student-name:not(.first-name):not(.last-name)").html(newData.student.name);
+            }
+            if (newData.student.hasOwnProperty("first_name")) {
+              editRow.find(".student-name.first-name").html(newData.student.first_name);
+            }
+            if (newData.student.hasOwnProperty("last_name")) {
+              editRow.find(".student-name.last-name").html(newData.student.last_name);
             }
             if (newData.student.hasOwnProperty("email")) {
               editRow.data("student-email", newData.student.email);

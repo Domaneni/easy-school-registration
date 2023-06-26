@@ -41,7 +41,21 @@ class ESR_Payment_Table_Column_Content {
     public static function esr_print_student_name_column_content_callback($payment, $user_data)
     {
         $user_name = $user_data ? $user_data->display_name : esc_html__( 'deleted student', 'easy-school-registration' );
-        ?><td class="student-surname"><?php echo esc_html($user_name); ?></td><?php
+        $separate_name_enabled = intval( ESR()->settings->esr_get_option( 'show_separated_names_enabled', -1 ) ) != -1;
+
+        if ($separate_name_enabled) {
+            $first_name  = $user_data ? $user_data->first_name : esc_html__( 'deleted student', 'easy-school-registration' );
+            $last_name  = $user_data ? $user_data->last_name : esc_html__( 'deleted student', 'easy-school-registration' );
+
+        ?>
+            <td class="student-name"><?php echo esc_html($first_name); ?></td>
+            <td class="student-name"><?php echo esc_html($last_name); ?></td>
+        <?php
+        } else {
+        ?>
+            <td class="student-name"><?php echo esc_html($user_name); ?></td>
+        <?php
+        }
     }
 
     public static function esr_print_student_email_column_content_callback($payment, $user_data)
