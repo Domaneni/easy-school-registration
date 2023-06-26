@@ -160,7 +160,7 @@ input.error {
 	cursor: default;
 }
 
-.esr-courses-to-registration .esr-course.esr-remove {
+.esr-registration-form-container .esr-course.esr-remove {
 	background-color: var(--esr-bg-course-remove, #fbc934);
 	color: #454545;
 }
@@ -773,6 +773,8 @@ input.error {
 	border: 0;
 	padding: 10px 15px;
 	cursor: pointer;
+	background-color: var(--esr-bg-submit-button, #fbc934);
+	color: var(--esr-color-submit-button, #454545);
 }
 
 //Ribbon style

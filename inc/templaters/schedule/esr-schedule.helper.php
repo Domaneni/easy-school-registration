@@ -309,7 +309,7 @@ class ESR_Schedule_Helper {
 			$rule .= 'background-color:' . $css_value . ';';
 
 			if (!empty($value['var']['background_color'])) {
-				$rule .= $value['var']['background_color'] . ':' . $css_value . ';';
+				return $value['var']['background_color'] . ':' . $css_value . ';';
 			}
 		}
 

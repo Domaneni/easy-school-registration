@@ -110,7 +110,7 @@ $mobile-schedule: "only screen and (max-width : 766px)";
 			display: block;
 			float: left;
 			margin: 0;
-			color: #c6c5c5;
+			color: var(--esr-color-description-course-add, #c6c5c5);
 			font-size: 14px;
 			text-align: center;
 			font-family: Arial, "Times New Roman", "Bitstream Charter", Times, serif;
@@ -123,7 +123,7 @@ $mobile-schedule: "only screen and (max-width : 766px)";
 			}
 			
 			.esr-title {
-				color: #fff;
+				color: var(--esr-color-title-course-add, #fff);
 				font-weight: bold;
 				font-size: 16px;
 				text-align: center;
@@ -134,11 +134,17 @@ $mobile-schedule: "only screen and (max-width : 766px)";
 				padding: 5px 1px;
 			}
 			&.esr-add {
-				background-color: #0a4450;
+				background-color: var(--esr-bg-course-add, #0a4450);
 				cursor: pointer;
 			}
 			&.esr-full {
-				background-color: #7a8d91;
+				background-color: var(--esr-bg-course-full, #7a8d91);
+				color: var(--esr-color-description-course-full, #c6c5c5);
+
+				.esr-title {
+					color: var(--esr-color-title-course-full, #fff);
+				}
+
 				cursor: default;
 			}
 			&.esr-empty {
@@ -147,12 +153,12 @@ $mobile-schedule: "only screen and (max-width : 766px)";
 				cursor: default;
 			}
 			&.esr-remove {
-				background-color: #fbc934;
-				color: #454545;
+				background-color: var(--esr-bg-course-remove, #fbc934);
+				color: var(--esr-color-description-course-remove, #454545);
 				cursor: pointer;
 				
 				.esr-title {
-					color: #000;
+					color: var(--esr-color-title-course-remove, #000);
 				}
 			}
 			.esr-teachers {
@@ -383,8 +389,8 @@ $mobile-schedule: "only screen and (max-width : 766px)";
 						}
 						
 						&.esr-remove {
-							background-color: #fbc934;
-							color: #454545;
+							background-color: var(--esr-bg-course-remove, #fbc934);
+							color: var(--esr-color-description-course-remove, #454545);
 						}
 						.esr-title {
 							word-wrap: normal;
