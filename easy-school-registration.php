@@ -23,6 +23,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'esr_freemius_support' ) ) {
+    // Create a helper function for easy SDK access.
+    function esr_freemius_support() {
+        global $esr_freemius_support;
+
+        if ( ! isset( $esr_freemius_support ) ) {
+
+            // Include Freemius SDK.
+            require_once dirname(__FILE__) . '/freemius/start.php';
+            $esr_freemius_support = fs_dynamic_init( array(
+                'id'                  => '11027',
+                'slug'                => 'easy-school-registration',
+                'type'                => 'plugin',
+                'public_key'          => 'pk_5b03acdd5909865ef9a9aa3904b77',
+                'is_premium'          => false,
+                'has_addons'          => true,
+                'has_paid_plans'      => false,
+                'navigation'         => 'tabs',
+                'menu'            => array(
+                    'slug'       => 'esr_admin_sub_page_addons',
+                    'first-path' => 'admin.php?page=esr_admin_sub_page_addons',
+                    'parent'     => array(
+                        'slug' => 'esr_admin',
+                    ),
+                ),
+            ));
+        }
+
+        return $esr_freemius_support;
+    }
+
+    // Init Freemius.
+    esr_freemius_support();
+    // Signal that SDK was initiated.
+    do_action( 'esr_freemius_support_loaded' );
+}
+
 if ( ! class_exists( 'Easy_School_Registration' ) ) {
 
 	/**
@@ -357,6 +394,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/esr-registration.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/add-over-limit/esr-add-over-limit.template.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/add-over-limit/subblock/esr-add-over-limit-form.subblock.php';
+            require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/addons/esr-addons.template.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/course-in-numbers/esr-course-in-numbers.template.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/course-in-numbers/esr-course-in-numbers-course.helper.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/administration/course-in-numbers/esr-course-in-numbers-table.template.php';

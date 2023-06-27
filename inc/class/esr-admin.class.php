@@ -24,6 +24,7 @@ class ESR_Admin {
 		add_submenu_page(self::ADMIN_MENU_SLUG, esc_html__('Payment emails', 'easy-school-registration'), esc_html__('Payment emails', 'easy-school-registration'), 'esr_payment_emails', ESR_Template_Payment_Emails::MENU_SLUG, ['ESR_Template_Payment_Emails', 'print_page']);
 
 		add_submenu_page(self::ADMIN_MENU_SLUG, esc_html__('Settings', 'easy-school-registration'), esc_html__('Settings', 'easy-school-registration'), 'esr_settings', ESR_Settings_Templater::MENU_SLUG, ['ESR_Settings_Templater', 'print_page']);
+        add_submenu_page(self::ADMIN_MENU_SLUG, esc_html__('Addons', 'easy-school-registration'), esc_html__('Addons', 'easy-school-registration'), 'esr_school', ESR_Addons_Template::MENU_SLUG, ['ESR_Addons_Template', 'print_page']);
 		add_submenu_page(self::ADMIN_MENU_SLUG, esc_html__('Students', 'easy-school-registration'), esc_html__('Students', 'easy-school-registration'), 'esr_students_view', ESR_Template_Students::MENU_SLUG, ['ESR_Template_Students', 'print_page']);
 
 		do_action('esr_add_admin_menu');
