@@ -211,6 +211,27 @@ input.error {
 	
 	.esr-user-form {
 		color: #000;
+		display: grid;
+		grid-template-columns: 50% 50%;
+
+		.esr-user-form-element {
+			display: flex;
+			flex-direction: column;
+
+			label {
+				font-weight: 700;
+				padding: 0.4375em;
+				text-align: left;
+			}
+
+			.esr-form-input {
+				padding: 9px;
+			}
+
+			&.stretch {
+				grid-column: span 2;
+			}
+		}
 		
 		th.required {
 			color: #000;

@@ -112,6 +112,10 @@ class ESR_Registration_Templater {
 				$show_phone_input         = intval( ESR()->settings->esr_get_option( 'show_phone_input', 1 ) ) !== - 1;
 				$show_confirm_email_input = intval( ESR()->settings->esr_get_option( 'reconfirm_email_required', - 1 ) ) === 1;
 				$is_one_column            = $show_phone_input || $show_confirm_email_input;
+
+				do_action('esr-registration-user-form-start');
+				do_action('esr-registration-user-form-element', $default_data);
+				do_action('esr-registration-user-form-end');
 				?>
 				<table class="esr-user-form">
 					<tbody>

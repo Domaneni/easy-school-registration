@@ -420,6 +420,8 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/userinfo/courses/subblock/esr-user-courses-schedule.subblock.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/userinfo/payments/esr.templater.php';
 
+			require_once ESR_PLUGIN_PATH . '/inc/templaters/registration/esr-registration-user-form.templater.php';
+
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/helpers/esr-all-waves-select.templater.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/helpers/esr-registration-thank-you-text.helper.php';
 			require_once ESR_PLUGIN_PATH . '/inc/templaters/helpers/esr-settings-tag.templater.php';
