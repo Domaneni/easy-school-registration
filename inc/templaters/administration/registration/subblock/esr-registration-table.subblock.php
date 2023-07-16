@@ -18,7 +18,7 @@ class ESR_Registrations_Table_Subblock_Templater {
 		$separate_name_enabled = intval( ESR()->settings->esr_get_option( 'show_separated_names_enabled', -1 ) ) != -1;
 
 
-		$users_data = get_users( [ 'fields' => [ 'ID', 'display_name', 'user_email', 'user_firstname' ] ] );
+		$users_data = get_users( [ 'fields' => [ 'ID', 'display_name', 'user_email' ] ] );
 		$user_data  = [];
 
 		foreach ( $users_data as $u ) {
