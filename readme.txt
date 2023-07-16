@@ -3,7 +3,7 @@ Contributors: domaneni
 Donate link: https://ko-fi.com/domaneni
 Tags: school, registration, dance, easy registration
 Tested up to: 6.2.2
-Stable Tag: 3.9.5
+Stable Tag: 3.9.6
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,6 +62,10 @@ From your WordPress dashboard
 6. Styling setting page
 
 == Changelog ==
+
+= 3.9.6 2023-07-16 =
+
+* Fix - Removed user field (user_firstname) that is not used already
 
 = 3.9.5 2023-06-26 =
 
