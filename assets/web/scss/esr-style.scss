@@ -214,22 +214,48 @@ input.error {
 		display: grid;
 		grid-template-columns: 50% 50%;
 
+		@media (max-width: 768px) {
+			grid-template-columns: 100%;
+		}
+
 		.esr-user-form-element {
 			display: flex;
 			flex-direction: column;
+			border-bottom: 1px solid #000;
+			border-right: 1px solid #000;
+
+
 
 			label {
 				font-weight: 700;
 				padding: 0.4375em;
 				text-align: left;
+				border-bottom: 1px solid #000;
+
+				&.required::after {
+					content: '*';
+					margin-left: 5px;
+				}
 			}
 
 			.esr-form-input {
 				padding: 9px;
+
+				&.checkbox {
+					label {
+						font-weight: 400;
+						border: 0;
+						cursor: pointer;
+					}
+				}
 			}
 
 			&.stretch {
 				grid-column: span 2;
+
+				@media (max-width: 768px) {
+					grid-column: 1;
+				}
 			}
 		}
 		
@@ -636,7 +662,8 @@ input.error {
 
 .esr-user-form {
 	border-spacing: 0;
-	border: 1px solid #000;
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
 	margin: 0 0 1.75em;
 	table-layout: fixed;
 	width: 100%;
