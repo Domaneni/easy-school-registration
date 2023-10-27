@@ -2,7 +2,7 @@ const path = require( 'path' );
 const webpack = require( 'webpack' );
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const IgnoreEmitPlugin = require('ignore-emit-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 module.exports = {
     entry: {
@@ -50,7 +50,7 @@ module.exports = {
         ],
     },
     plugins: [
-        new FixStyleOnlyEntriesPlugin(),
+        new RemoveEmptyScriptsPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].min.css',
             //chunkFilename: 'chunk-[id][name].css',

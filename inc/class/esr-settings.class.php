@@ -589,7 +589,7 @@ class ESR_Settings {
 					'dancing_with_enforce'              => [
 						'id'   => 'dancing_with_enforce',
 						'name' => esc_html__( 'Partner Selection Required', 'easy-school-registration' ),
-						'desc' => esc_html__( 'If enabled, students have to select during the registration whether they have a partner or not. This greatly reduces mistakes during registration.', 'easy-school-registration' ),
+						'desc' => esc_html__( 'If enabled, students have to fill partner email during the registration. This greatly reduces mistakes during registration.', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => true,
 					],
@@ -618,6 +618,13 @@ class ESR_Settings {
                         'id'   => 'allow_multiple_registrations',
                         'name' => esc_html__( 'Allow multiple registrations', 'easy-school-registration' ),
                         'desc' => esc_html__( 'If enabled, user will be able to register multiple times on the same course.', 'easy-school-registration' ),
+                        'type' => 'checkbox',
+                        'std'  => false,
+                    ],
+                    'show_new_user_form'          => [
+                        'id'   => 'show_new_user_form',
+                        'name' => esc_html__( 'Show new user form', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, new responsive user form will be shown during registration.', 'easy-school-registration' ),
                         'type' => 'checkbox',
                         'std'  => false,
                     ],
