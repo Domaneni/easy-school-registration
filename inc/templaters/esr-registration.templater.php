@@ -258,7 +258,7 @@ class ESR_Registration_Templater {
 						<option value="<?php echo esc_attr(ESR_Dancing_As::FOLLOWER); ?>"><?php echo (empty( $follower_settings_label ) ? esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::FOLLOWER )) : esc_html($follower_settings_label) ); ?></option>
 					</select>
 				</div>
-				<?php if ( intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) !== 1 ) { ?>
+				<?php if ( intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) === -1 ) { ?>
 					<div class="esr-info-row esr-row-choose-partner">
 						<span class="esr-info-row-label"><?php esc_html_e( 'Do you have partner?', 'easy-school-registration' ); ?></span>
 						<div class="esr-info-row-input">
