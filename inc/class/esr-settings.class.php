@@ -621,6 +621,13 @@ class ESR_Settings {
                         'type' => 'checkbox',
                         'std'  => false,
                     ],
+                    'show_new_user_form'          => [
+                        'id'   => 'show_new_user_form',
+                        'name' => esc_html__( 'Show new user form', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, new responsive user form will be shown during registration.', 'easy-school-registration' ),
+                        'type' => 'checkbox',
+                        'std'  => false,
+                    ],
 				],
 				'registration_opening' => [
 					'registration_not_opened' => [

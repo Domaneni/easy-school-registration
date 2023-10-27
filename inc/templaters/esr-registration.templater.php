@@ -113,13 +113,120 @@ class ESR_Registration_Templater {
 				$show_confirm_email_input = intval( ESR()->settings->esr_get_option( 'reconfirm_email_required', - 1 ) ) === 1;
 				$is_one_column            = $show_phone_input || $show_confirm_email_input;
 
-				do_action('esr_registration_user_form_start');
-				do_action('esr-registration-user-form-element', $default_data);
-				do_action('esr_registration_user_form_end');
+                if ( intval( ESR()->settings->esr_get_option( 'show_new_user_form', -1 ) ) === 1 ) {
+                    do_action('esr_registration_user_form_start');
+                    do_action('esr-registration-user-form-element', $default_data);
+                    do_action('esr_front_page_registration_form_input', $wave_ids); // Old way of calling inputs
+                    do_action('esr_registration_user_form_end');
+                } else {
+                    ?>
+                    <table class="esr-user-form esr-old-form">
+                        <tbody>
+                        <tr>
+                            <th class="required"><?php esc_html_e( 'First Name', 'easy-school-registration' ); ?></th>
+                            <th class="required"><?php esc_html_e( 'Surname', 'easy-school-registration' ); ?></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input required type="text" name="name"
+                                       value="<?php echo esc_attr($default_data['name']); ?>">
+                            </td>
+                            <td>
+                                <input required type="text" name="surname"
+                                       value="<?php echo esc_attr($default_data['surname']); ?>">
+                            </td>
+                        </tr>
+                        </tbody>
+                        <tbody>
+                        <tr>
+                            <th class="required" <?php if ( ! $is_one_column ) {
+                                echo 'colspan="2"';
+                            } ?>><?php esc_html_e( 'Email', 'easy-school-registration' ); ?></th>
+                            <?php
+                            if ( ! $show_confirm_email_input ) {
+                                $this->esr_print_phone_header( $show_phone_input );
+                            } else {
+                                $this->esr_print_reconfirm_email_header();
+                            }
+                            ?>
+                        </tr>
+                        <tr>
+                            <td <?php if ( ! $is_one_column ) {
+                                echo 'colspan="2"';
+                            } ?>>
+                                <input required type="text" name="email"
+                                       value="<?php echo esc_attr($default_data['email']); ?>">
+                            </td>
+                            <?php
+                            if ( ! $show_confirm_email_input ) {
+                                $this->esr_print_phone_input( $show_phone_input, $default_data );
+                            } else {
+                                $this->esr_print_confirm_email_input();
+                            }
+                            ?>
+                        </tr>
+                        <?php
+                        if ( $show_confirm_email_input && $show_phone_input ) {
+                            ?>
+                            <tr>
+                                <?php $this->esr_print_phone_header( $show_phone_input ); ?>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <?php $this->esr_print_phone_input( $show_phone_input, $default_data ); ?>
+                                <td></td>
+                            </tr>
+                        <?php } ?>
+                        </tbody>
+                        <?php
+                        if ( intval( ESR()->settings->esr_get_option( 'newsletter_enabled', - 1 ) ) !== - 1 ) {
+                            ?>
+                            <tbody>
+                            <tr>
+                                <td colspan="2"><label for="newsletter">
+                                        <input name="newsletter" type="checkbox"
+                                               value="1"
+                                            <?php
+                                            if ( ( $default_data['newsletter'] == 1 ) || ( $default_data['newsletter'] === "" && ( intval( ESR()->settings->esr_get_option( 'newsletter_default', 1 ) ) !== - 1 ) ) ) {
+                                                echo 'checked';
+                                            }
+                                            ?>>
+                                        <?php echo wp_kses_post(nl2br( stripcslashes( ESR()->settings->esr_get_option( 'newsletter_text', '' )))); ?></label>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <?php
+                        }
+                        if ( intval( ESR()->settings->esr_get_option( 'terms_conditions_enabled', - 1 ) ) != - 1 ) {
+                            ?>
+                            <tbody>
+                            <tr>
+                                <td colspan="2"><label for="terms-conditions">
+                                        <input name="terms-conditions" type="checkbox" value="1"
+                                            <?php echo( intval( ESR()->settings->esr_get_option( 'terms_conditions_required', - 1 ) ) != - 1 ? ' required' : '' ); ?>>
+                                        <?php echo wp_kses_post(nl2br( stripcslashes( ESR()->settings->esr_get_option( 'terms_conditions_text', '' ) ) )); ?></label>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <?php
+                        }
+                        ?>
+                        <?php do_action( 'esr_front_page_registration_form_input', $wave_ids ); ?>
+                        <?php if ( intval( ESR()->settings->esr_get_option( 'note_disabled', - 1 ) ) !== 1 ) { ?>
+                            <tbody>
+                            <tr>
+                                <th colspan="2"><?php echo esc_html(ESR()->settings->esr_get_option( 'registration_note_title', esc_html__( 'Note', 'easy-school-registration' ) )); ?></th>
+                            </tr>
+                            <tr>
+                                <?php $note_length = ESR()->settings->esr_get_option( 'note_limit', 0 ); ?>
+                                <td colspan="2" <?php if ( $note_length > 0 ) { ?>class="esr-textarea-limit"<?php } ?>><textarea name="note" <?php if ( $note_length > 0 ) { ?>maxlength="<?php echo esc_attr($note_length); ?>"<?php } ?>></textarea></td>
+                            </tr>
+                            </tbody>
+                        <?php } ?>
+                    </table>
+                    <?php
+                }
 				?>
-
-					<?php do_action( 'esr_front_page_registration_form_input', $wave_ids ); ?>
-
 				<p><input type="submit" name="esr-registration-submitted" value="<?php esc_attr_e( 'Register', 'easy-school-registration' ); ?>"/></p>
 			</form>
 			<div class="esr-prep-form-row" style="display: none;">
