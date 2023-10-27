@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-07-16T05:06:18+00:00\n"
+"POT-Creation-Date: 2023-10-27T05:09:39+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.0\n"
 "X-Domain: easy-school-registration\n"
@@ -122,36 +122,625 @@ msgstr ""
 msgid "Some error occured."
 msgstr ""
 
-#: inc/class/esr-currency.class.php:15
-msgid "US Dollars (&#36;)"
+#: inc/class/esr-currency.class.php:16
+msgid "UAE dirham"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:17
+msgid "Afghan afghani"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:18
+msgid "Albanian lek"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:19
-msgid "Euros (&euro;)"
+msgid "Armenian dram"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:20
+msgid "Netherlands Antillean gulden"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:21
+msgid "Angolan kwanza"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:22
+msgid "Argentine peso"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:23
-msgid "Pound Sterling (&pound;)"
+msgid "Australian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:24
+msgid "Aruban florin"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:25
+msgid "Azerbaijani manat"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:26
+msgid "Bosnia and Herzegovina konvertibilna marka"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:27
-msgid "Czech Crown (Kč)"
+msgid "Barbadian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:28
+msgid "Bangladeshi taka"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:29
+msgid "Bulgarian lev"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:30
+msgid "Bahraini dinar"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:31
-msgid "Danish Krone (kr)"
+msgid "Burundi franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:32
+msgid "Bermudian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:33
+msgid "Brunei dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:34
+msgid "Bolivian boliviano"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:35
-msgid "Hungarian Forint (Ft)"
+msgid "Brazilian real"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:36
+msgid "Bahamian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:37
+msgid "Bhutanese ngultrum"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:38
+msgid "Botswana pula"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:39
-msgid "Polish Zloty (Z&#x142;)"
+msgid "Belarusian ruble"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:40
+msgid "Belize dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:41
+msgid "Canadian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:42
+msgid "Congolese franc"
 msgstr ""
 
 #: inc/class/esr-currency.class.php:43
-msgid "Thai Baht (฿)"
+msgid "Swiss franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:44
+msgid "Chilean peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:45
+msgid "Chinese/Yuan renminbi"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:46
+msgid "Colombian peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:47
+msgid "Costa Rican colon"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:48
+msgid "Cuban peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:49
+msgid "Cape Verdean escudo"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:50
+msgid "Czech koruna"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:51
+msgid "Djiboutian franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:52
+msgid "Danish krone"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:53
+msgid "Dominican peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:54
+msgid "Algerian dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:55
+msgid "Estonian kroon"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:56
+msgid "Egyptian pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:57
+msgid "Eritrean nakfa"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:58
+msgid "Ethiopian birr"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:59
+msgid "European Euro"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:60
+msgid "Fijian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:61
+msgid "Falkland Islands pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:62
+msgid "British pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:63
+msgid "Georgian lari"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:64
+msgid "Ghanaian cedi"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:65
+msgid "Gibraltar pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:66
+msgid "Gambian dalasi"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:67
+msgid "Guinean franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:68
+#: inc/class/esr-currency.class.php:163
+msgid "Central African CFA franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:69
+msgid "Guatemalan quetzal"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:70
+msgid "Guyanese dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:71
+msgid "Hong Kong dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:72
+msgid "Honduran lempira"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:73
+msgid "Croatian kuna"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:74
+msgid "Haitian gourde"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:75
+msgid "Hungarian forint"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:76
+msgid "Indonesian rupiah"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:77
+msgid "Israeli new sheqel"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:78
+msgid "Indian rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:79
+msgid "Iraqi dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:80
+msgid "Iranian rial"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:81
+msgid "Icelandic krona"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:82
+msgid "Jamaican dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:83
+msgid "Jordanian dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:84
+msgid "Japanese yen"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:85
+msgid "Kenyan shilling"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:86
+msgid "Kyrgyzstani som"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:87
+msgid "Cambodian riel"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:88
+msgid "Comorian franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:89
+msgid "North Korean won"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:90
+msgid "South Korean won"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:91
+msgid "Kuwaiti dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:92
+msgid "Cayman Islands dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:93
+msgid "Kazakhstani tenge"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:94
+msgid "Lao kip"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:95
+msgid "Lebanese lira"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:96
+msgid "Sri Lankan rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:97
+msgid "Liberian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:98
+msgid "Lesotho loti"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:99
+msgid "Lithuanian litas"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:100
+msgid "Latvian lats"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:101
+msgid "Libyan dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:102
+msgid "Moroccan dirham"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:103
+msgid "Moldovan leu"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:104
+msgid "Malagasy ariary"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:105
+msgid "Macedonian denar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:106
+msgid "Myanma kyat"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:107
+msgid "Mongolian tugrik"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:108
+msgid "Macanese pataca"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:109
+msgid "Mauritanian ouguiya"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:110
+msgid "Mauritian rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:111
+msgid "Maldivian rufiyaa"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:112
+msgid "Malawian kwacha"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:113
+msgid "Mexican peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:114
+msgid "Malaysian ringgit"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:115
+msgid "Mozambican metical"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:116
+msgid "Namibian dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:117
+msgid "Nigerian naira"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:118
+msgid "Nicaraguan cordoba"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:119
+msgid "Norwegian krone"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:120
+msgid "Nepalese rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:121
+msgid "New Zealand dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:122
+msgid "Omani rial"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:123
+msgid "Panamanian balboa"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:124
+msgid "Peruvian nuevo sol"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:125
+msgid "Papua New Guinean kina"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:126
+msgid "Philippine peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:127
+msgid "Pakistani rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:128
+msgid "Polish zloty"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:129
+msgid "Paraguayan guarani"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:130
+msgid "Qatari riyal"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:131
+msgid "Romanian leu"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:132
+msgid "Serbian dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:133
+msgid "Russian ruble"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:134
+msgid "Saudi riyal"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:135
+msgid "Solomon Islands dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:136
+msgid "Seychellois rupee"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:137
+msgid "Sudanese pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:138
+msgid "Swedish krona"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:139
+msgid "Singapore dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:140
+msgid "Saint Helena pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:141
+msgid "Sierra Leonean leone"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:142
+msgid "Somali shilling"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:143
+msgid "Surinamese dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:144
+msgid "Syrian pound"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:145
+msgid "Swazi lilangeni"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:146
+msgid "Thai baht"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:147
+msgid "Tajikistani somoni"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:148
+msgid "Turkmen manat"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:149
+msgid "Tunisian dinar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:150
+msgid "Turkish new lira"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:151
+msgid "Trinidad and Tobago dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:152
+msgid "New Taiwan dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:153
+msgid "Tanzanian shilling"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:154
+msgid "Ukrainian hryvnia"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:155
+msgid "Ugandan shilling"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:156
+msgid "United States dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:157
+msgid "Uruguayan peso"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:158
+msgid "Uzbekistani som"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:159
+msgid "Venezuelan bolivar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:160
+msgid "Vietnamese dong"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:161
+msgid "Vanuatu vatu"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:162
+msgid "Samoan tala"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:164
+msgid "East Caribbean dollar"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:165
+msgid "Special Drawing Rights"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:166
+msgid "West African CFA franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:167
+msgid "CFP franc"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:168
+msgid "Yemeni rial"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:169
+msgid "South African rand"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:170
+msgid "Zambian kwacha"
+msgstr ""
+
+#: inc/class/esr-currency.class.php:171
+msgid "Zimbabwean dollar"
 msgstr ""
 
 #: inc/class/esr-ribbon.class.php:25
