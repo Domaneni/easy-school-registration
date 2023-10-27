@@ -4,7 +4,7 @@
  * Plugin URI:      https://easyschoolregistration.com/
  * Description:     Tools to help you run your school better
  *
- * Version:         3.9.5
+ * Version:         3.9.6
  * Tested up to:    6.2.2
  *
  * Author:          Zbynek Nedoma
@@ -276,7 +276,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 
 		private function setup_constants() {
 			define( 'ESR_SLUG', 'esr' );
-			define( 'ESR_VERSION', '3.9.5' );
+			define( 'ESR_VERSION', '3.9.6' );
 			// Plugin Root File.
 			if ( ! defined( 'ESR_PLUGIN_FILE' ) ) {
 				define( 'ESR_PLUGIN_FILE', __FILE__ );
