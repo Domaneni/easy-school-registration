@@ -589,7 +589,7 @@ class ESR_Settings {
 					'dancing_with_enforce'              => [
 						'id'   => 'dancing_with_enforce',
 						'name' => esc_html__( 'Partner Selection Required', 'easy-school-registration' ),
-						'desc' => esc_html__( 'If enabled, students have to select during the registration whether they have a partner or not. This greatly reduces mistakes during registration.', 'easy-school-registration' ),
+						'desc' => esc_html__( 'If enabled, students have to fill partner email during the registration. This greatly reduces mistakes during registration.', 'easy-school-registration' ),
 						'type' => 'checkbox',
 						'std'  => true,
 					],

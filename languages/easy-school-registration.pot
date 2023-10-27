@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-10-27T07:27:13+00:00\n"
+"POT-Creation-Date: 2023-10-27T19:44:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.0\n"
 "X-Domain: easy-school-registration\n"
@@ -742,7 +742,7 @@ msgid "Partner Selection Required"
 msgstr ""
 
 #: inc/class/esr-settings.class.php:592
-msgid "If enabled, students have to select during the registration whether they have a partner or not. This greatly reduces mistakes during registration."
+msgid "If enabled, students have to fill partner email during the registration. This greatly reduces mistakes during registration."
 msgstr ""
 
 #: inc/class/esr-settings.class.php:598
