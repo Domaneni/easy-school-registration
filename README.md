@@ -2,17 +2,54 @@
 
 Changelog
 -------
-3.8.9 - 16.10.2020
+
+3.9.7 - 2023-07-16
+
+- New: New user registration form (enabled by settings)
+- New: Lots of new currencies
+- Fix: Partner Selection Required description
+
+3.9.6 - 2023-07-16
+
+- Fix: Removed user field (user_firstname) that is not used already
+
+3.9.5 - 2023-06-26
+
+- Fix: Registration enforce partner was wrongly validated
+- Fix: Already registered override function was wrongly validated
+- Add: Option to split student name to first name and surname in admin tables
+- Add: Option to hide couples settings and data in administration
+- Add: Support for variables in styling settings
+
+3.9.4 - 2023-06-05
+
+- Fix: WordPress translations load
+
+3.9.3 - 2023-04-09
+
+- Add: Option to enable multiple registrations to same course by the same user
+- Fix: Log table column names
+
+3.9.2 - 2022-11-15
+
+- Update: Currency setup and added new Thai Baht currency
+
+3.9.1 - 2022-09-05
+
+- Fix: Fix names for options that prevented saving settings
+- Update: Payment table display changed to action calls
+
+3.8.9: 16.10.2020
 
 - New: Option to hide note in registrations
 - Fix: Zoom bug
 - Fix: Send confirmation email after registration change
 
-3.8.8 - 05.10.2020
+3.8.8: 05.10.2020
 
 - New: Added student notes
 
-3.8.7 - 02.10.2020
+3.8.7: 02.10.2020
 
 - Update: Hide passed courses in table view
 - Update: Plugin updater update

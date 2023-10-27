@@ -2,8 +2,8 @@
 Contributors: domaneni
 Donate link: https://ko-fi.com/domaneni
 Tags: school, registration, dance, easy registration
-Tested up to: 6.2.2
-Stable Tag: 3.9.6
+Tested up to: 6.3.2
+Stable Tag: 3.9.7
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -62,6 +62,12 @@ From your WordPress dashboard
 6. Styling setting page
 
 == Changelog ==
+
+= 3.9.7 2023-07-16 =
+
+* New - New user registration form (enabled by settings)
+* New - Lots of new currencies
+* Fix - Partner Selection Required description
 
 = 3.9.6 2023-07-16 =
 
