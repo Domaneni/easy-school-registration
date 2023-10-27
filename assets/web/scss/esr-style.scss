@@ -211,11 +211,14 @@ input.error {
 	
 	.esr-user-form {
 		color: #000;
-		display: grid;
-		grid-template-columns: 50% 50%;
 
-		@media (max-width: 768px) {
-			grid-template-columns: 100%;
+		&:not(.esr-old-form) {
+			display: grid;
+			grid-template-columns: 50% 50%;
+
+			@media (max-width: 768px) {
+				grid-template-columns: 100%;
+			}
 		}
 
 		.esr-user-form-element {

@@ -2,39 +2,26 @@
   "name": "easy-school-registration",
   "title": "Easy School Registration",
   "author": "Zbynek Nedoma",
-  "scripts": {
-    "dev": "cross-env webpack --watch",
-    "build": "cross-env NODE_ENV=production webpack -p"
-  },
-  "description": "Changelog ------- 3.8.9 - 16.10.2020",
   "version": "1.0.0",
-  "main": "Gruntfile.js",
-  "directories": {
-    "test": "tests"
+  "description": "Changelog ------- 3.8.9 - 16.10.2020",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Domaneni/easy-school-registration.git"
-  },
-  "keywords": [],
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Domaneni/easy-school-registration/issues"
-  },
-  "homepage": "https://github.com/Domaneni/easy-school-registration#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.3",
-    "cross-env": "^6.0.3",
-    "css-loader": "^3.3.0",
-    "file-loader": "^5.0.2",
-    "ignore-emit-webpack-plugin": "^2.0.2",
-    "image-webpack-loader": "^8.1.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.13.0",
-    "postcss-loader": "^3.0.0",
-    "sass-loader": "^8.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-fix-style-only-entries": "^0.6.1"
+    "css-loader": "^6.5.1",
+    "ignore-emit-webpack-plugin": "^2.0.6",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^9.0.0",
+    "remove-files-webpack-plugin": "^1.4.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "webpack-remove-empty-scripts": "^1.0.4"
   }
 }
