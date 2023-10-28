@@ -2,14 +2,14 @@
 # This file is distributed under the GPL 3.
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy School Registration 3.9.6\n"
+"Project-Id-Version: Easy School Registration 3.9.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-school-registration\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-10-27T19:44:51+00:00\n"
+"POT-Creation-Date: 2023-10-28T04:45:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.8.0\n"
 "X-Domain: easy-school-registration\n"
@@ -1420,7 +1420,7 @@ msgstr ""
 #: inc/templaters/administration/students/esr-students.template.php:33
 #: inc/templaters/esr-registration.templater.php:218
 #: inc/templaters/helpers/esr-student-export.templater.php:99
-#: inc/templaters/registration/esr-registration-user-form.templater.php:169
+#: inc/templaters/registration/esr-registration-user-form.templater.php:177
 msgid "Note"
 msgstr ""
 
@@ -2208,7 +2208,7 @@ msgstr ""
 #: inc/templaters/esr-registration.templater.php:290
 #: inc/templaters/helpers/esr-student-export.templater.php:70
 #: inc/templaters/registration/esr-registration-user-form.templater.php:17
-#: inc/templaters/registration/esr-registration-user-form.templater.php:143
+#: inc/templaters/registration/esr-registration-user-form.templater.php:150
 msgid "Phone"
 msgstr ""
 
