@@ -63,7 +63,7 @@ From your WordPress dashboard
 
 == Changelog ==
 
-= 3.9.7 2023-07-16 =
+= 3.9.7 2023-10-28 =
 
 * New - New user registration form (enabled by settings)
 * New - Lots of new currencies
