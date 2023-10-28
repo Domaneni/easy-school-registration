@@ -16,18 +16,23 @@ class ESR_Database {
 	public static function esr_database_install_callback() {
 		self::create_tables();
 
+        update_option('esr_has_db_version', false);
         update_option('esr_db_version', ESR_VERSION);
 	}
 
 	public static function database_uninstall() {
 		self::drop_tables();
 
-		delete_option('esr_db_version');
+		delete_option('esr_has_db_version');
+        delete_option('esr_db_version');
 	}
 
 	private static function database_update() {
         include_once 'updates/esr-update.3.9.3.php';
 
+        if (get_site_option('esr_has_db_version', 'not_set') === 'not_set') {
+            update_option('esr_has_db_version', true);
+        }
 		update_option('esr_db_version', ESR_VERSION);
 	}
 
