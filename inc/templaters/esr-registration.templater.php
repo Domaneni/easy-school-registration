@@ -113,7 +113,7 @@ class ESR_Registration_Templater {
 				$show_confirm_email_input = intval( ESR()->settings->esr_get_option( 'reconfirm_email_required', - 1 ) ) === 1;
 				$is_one_column            = $show_phone_input || $show_confirm_email_input;
 
-                if ( intval( ESR()->settings->esr_get_option( 'show_new_user_form', -1 ) ) === 1 ) {
+                if ( intval( ESR()->settings->esr_get_option( 'use_new_user_form', !get_site_option('esr_has_db_version') ) ) === 1 ) {
                     do_action('esr_registration_user_form_start');
                     do_action('esr-registration-user-form-element', $default_data);
                     do_action('esr_front_page_registration_form_input', $wave_ids); // Old way of calling inputs

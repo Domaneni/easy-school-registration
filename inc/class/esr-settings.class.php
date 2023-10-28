@@ -621,12 +621,12 @@ class ESR_Settings {
                         'type' => 'checkbox',
                         'std'  => false,
                     ],
-                    'show_new_user_form'          => [
-                        'id'   => 'show_new_user_form',
-                        'name' => esc_html__( 'Show new user form', 'easy-school-registration' ),
-                        'desc' => esc_html__( 'If enabled, new responsive user form will be shown during registration.', 'easy-school-registration' ),
+                    'use_new_user_form'          => [
+                        'id'   => 'use_new_user_form',
+                        'name' => esc_html__( 'Use new user form', 'easy-school-registration' ),
+                        'desc' => esc_html__( 'If enabled, new responsive user form will be used during registration.', 'easy-school-registration' ),
                         'type' => 'checkbox',
-                        'std'  => false,
+                        'std'  => !get_site_option('esr_has_db_version'),
                     ],
 				],
 				'registration_opening' => [
