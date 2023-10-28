@@ -131,20 +131,27 @@ class ESR_Registration_User_Form_Templater {
 		$show_phone_input         = intval( ESR()->settings->esr_get_option( 'show_phone_input', 1 ) ) !== - 1;
 
 		if ($show_phone_input) {
-			$show_confirm_email_input = intval( ESR()->settings->esr_get_option( 'reconfirm_email_required', - 1 ) ) === 1;
+
+            $show_confirm_email_input = intval( ESR()->settings->esr_get_option( 'reconfirm_email_required', - 1 ) ) === 1;
+			$is_required = intval( ESR()->settings->esr_get_option( 'phone_required', 1 ) ) !== 1;
 			$classes = ['esr-user-form-element'];
+            $label_class = [];
 
 			if ($show_confirm_email_input) {
 				$classes[] = 'stretch';
+            }
+
+            if ($is_required) {
+                $label_class[] = 'required';
 			}
 
 			?>
 				<div class="<?php echo esc_attr(implode(' ', $classes)); ?>">
-					<label for="esr-phone" class="required"><?php esc_html_e( 'Phone', 'easy-school-registration' ); ?></label>
+					<label for="esr-phone" class="<?php echo esc_attr(implode(' ', $label_class)); ?>"><?php esc_html_e( 'Phone', 'easy-school-registration' ); ?></label>
 					<div class="esr-form-input">
 						<input id="esr-phone" type="text" name="phone"
 						value="<?php echo( $default_data['phone'] ? esc_attr($default_data['phone']) : '' ); ?>"
-						<?php if ( intval( ESR()->settings->esr_get_option( 'phone_required', 1 ) ) !== - 1 ) {
+						<?php if ( $is_required ) {
 							echo 'required';
 						} ?>>
 					</div>
@@ -152,6 +159,7 @@ class ESR_Registration_User_Form_Templater {
 			<?php
 		}
 	}
+
     public static function esr_user_form_note_callback($default_data) {
         $show_note         = intval( ESR()->settings->esr_get_option( 'note_disabled', -1 ) ) !== 1;
 
@@ -173,6 +181,7 @@ class ESR_Registration_User_Form_Templater {
 				</div>
         <?php }
     }
+
     public static function esr_user_form_newsletter_callback($default_data) {
         $show_checkbox = intval( ESR()->settings->esr_get_option( 'newsletter_enabled', - 1 ) ) !== - 1;
 
@@ -194,6 +203,7 @@ class ESR_Registration_User_Form_Templater {
             </div>
         <?php }
     }
+
     public static function esr_user_form_terms_callback($default_data) {
         $show_checkbox = intval( ESR()->settings->esr_get_option( 'terms_conditions_enabled', - 1 ) ) != - 1;
 
