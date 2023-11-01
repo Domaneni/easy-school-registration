@@ -1,7 +1,13 @@
 # Easy School Registration
 
-Changelog
--------
+## Documentation
+
+### Workers
+1. [Registration](./docs/workers/registration.md)
+
+## Changelog
+
+---
 
 3.9.7 - 2023-10-28
 
