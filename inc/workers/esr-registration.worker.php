@@ -134,7 +134,7 @@ class ESR_Registration_Worker {
 		}
 
 		if ( apply_filters('esr_registration_validation_registration', true, $data) ) {
-			$esr_reg_errors->add( 'courses.all.empty', esc_html__(apply_filters('esr_registration_validation_empty_courses_message', __( 'You must choose at least one course.', 'easy-school-registration' ))));
+			$esr_reg_errors->add( 'courses.all.empty', esc_html__(apply_filters('esr_registration_validation_registration_message', __( 'You must choose at least one course.', 'easy-school-registration' ))));
 		} else {
 			foreach ( $data->courses as $course_id => $course ) {
 				if ( ! ESR()->course->is_course_solo( intval( $course_id ) ) ) {
