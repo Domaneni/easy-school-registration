@@ -10,7 +10,8 @@ notifications:
 
 branches:
   only:
-    - master
+    - main
+    - feature/plugin-tests
 
 cache:
   directories:
