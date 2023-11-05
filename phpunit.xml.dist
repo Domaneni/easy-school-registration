@@ -1,47 +1,15 @@
 <?xml version="1.0"?>
 <phpunit
-		bootstrap="tests/bootstrap.php"
-		backupGlobals="false"
-		colors="true"
-		convertErrorsToExceptions="true"
-		convertNoticesToExceptions="true"
-		convertWarningsToExceptions="true"
->
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	>
 	<testsuites>
-		<testsuite>
-			<directory suffix=".test.php">./tests/</directory>
+		<testsuite name="esr">
+			<directory suffix="Test.php">./tests/</directory>
 		</testsuite>
 	</testsuites>
-	<filter>
-		<whitelist processUncoveredFilesFromWhitelist="true">
-			<!-- Easy School Registration -->
-			<directory suffix=".php">inc/enums</directory>
-			<directory suffix=".php">inc/models</directory>
-			<directory suffix=".php">inc/workers</directory>
-			<directory suffix=".php">inc/cron</directory>
-			<file>inc/class/esr-hall.class.php</file>
-			<file>inc/class/esr-registration.class.php</file>
-			<file>inc/class/esr-schedule.class.php</file>
-			<file>inc/class/esr-user.class.php</file>
-			<file>inc/class/esr-payment.class.php</file>
-			<file>inc/class/esr-wpdb.class.php</file>
-			<file>inc/class/esr-currency.class.php</file>
-			<!-- Discounts -->
-			<directory suffix=".php">../esr-discounts/inc/enum</directory>
-			<directory suffix=".php">../esr-discounts/inc/worker</directory>
-			<file>../esr-discounts/inc/class/esrd-discount.class.php</file>
-			<file>../esr-discounts/inc/class/esrd-time-discount.class.php</file>
-			<file>../esr-discounts/inc/class/esrd-checkbox-discount.class.php</file>
-		</whitelist>
-	</filter>
-	<logging>
-		<log type="coverage-html" target="/tmp/report" lowUpperBound="35"
-			 highLowerBound="70"/>
-		<log type="coverage-clover" target="/tmp/coverage.xml"/>
-		<log type="coverage-php" target="/tmp/coverage.serialized"/>
-		<log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-		<log type="junit" target="/tmp/logfile.xml" logIncompleteSkipped="false"/>
-		<log type="testdox-html" target="/tmp/testdox.html"/>
-		<log type="testdox-text" target="/tmp/testdox.txt"/>
-	</logging>
 </phpunit>
