@@ -40,4 +40,7 @@ function esr_registration_validation_registration_callback($stop_registration, $
     return false; //Default validation if there are some courses selected
 }
 
-add_filter('esr_registration_validation_registration', 'esr_registration_validation_registration_callback', 30, 2);
+/**
+ * Use this filter for adding the registration filter
+ */
+//add_filter('esr_registration_validation_registration', 'esr_registration_validation_registration_callback', 30, 2);
