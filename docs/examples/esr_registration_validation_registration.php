@@ -1,7 +1,7 @@
 <?php
 
 function esr_registration_validation_registration_callback($stop_registration, $data) {
-    $limit = 3;
+    $limit = 3; //Maximum courses that student can have in one course
 
     if (!isset($data->courses) || !$data->courses || !isset( $data->user_info->email ) ) { //STOP: No Courses selected or email is empty
         return true;
@@ -17,8 +17,8 @@ function esr_registration_validation_registration_callback($stop_registration, $
         return false;
     }
 
-    $user    = get_user_by( 'email', $data->user_info->email );
-    $user_id = $user->ID;
+    $user     = get_user_by( 'email', $data->user_info->email );
+    $user_id  = $user->ID;
     $wave_ids = [];
 
     global $wpdb;
@@ -29,6 +29,7 @@ function esr_registration_validation_registration_callback($stop_registration, $
         if (!isset($wave_ids[$course_data->wave_id])) {
             $wave_id = $course_data->wave_id;
 
+            //Select only Confirmed and Waiting courses. Deleted are not counting to limit
             $registrations_count = $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->prefix}esr_course_registration AS cr JOIN {$wpdb->prefix}esr_course_data AS cd ON cr.course_id = cd.id WHERE cd.wave_id = %d AND cr.user_id = %d AND cr.status IN (%d, %d)", [intval($wave_id), intval($user_id), ESR_Registration_Status::CONFIRMED, ESR_Registration_Status::WAITING]));
 
             if (($registrations_count + $course_count) > $limit) {
