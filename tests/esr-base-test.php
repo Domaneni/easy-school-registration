@@ -10,6 +10,9 @@
  */
 class ESR_Base_Test {
 
+
+    protected static $initialized = FALSE;
+
 	/** var int */
 	private $teacher_first;
 
@@ -22,7 +25,11 @@ class ESR_Base_Test {
 
 
 	public function setUp() {
-        add_action('plugins_loaded', ['ESR_Database', 'esr_database_install_callback']);
+        if (!self::$initialized) {
+            \ESR_Database::esr_database_install_callback();
+            \ESRET_Database::esret_database_install_callback();
+            self::$initialized = TRUE;
+        }
 
         global $wpdb;
 
