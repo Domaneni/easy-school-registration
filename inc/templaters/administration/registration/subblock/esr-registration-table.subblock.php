@@ -72,7 +72,7 @@ class ESR_Registrations_Table_Subblock_Templater {
 			<tbody class="list">
 			<?php
 			$enabled_courses            = [];
-			$courses_data               = ESR()->course->get_courses_data_by_wave( $selected_wave, true );
+			$courses_data               = ESR()->course->get_courses_data_by_wave( $selected_wave, true, true);
 			$free_registrations_enabled = intval( ESR()->settings->esr_get_option( 'free_registrations_enabled', - 1 ) ) != - 1;
 			$multiple_dates             = [];
 			foreach ( $registrations as $registration_id => $registration ) {

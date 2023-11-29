@@ -247,15 +247,11 @@ class ESR_Registration_Templater {
 			<div class="registration-info">
 				<div class="esr-info-row">
 					<span class="esr-info-row-label"><?php esc_html_e( 'Dancing as', 'easy-school-registration' ); ?>:</span>
-					<?php
-					$leader_settings_label   = ESR()->settings->esr_get_option( 'leader_label', '' );
-					$follower_settings_label = ESR()->settings->esr_get_option( 'follower_label', '' );
-					?>
 					<select class="esr-info-row-input esr-dancing-as" required
 					        name="dancing-as-%course-id%">
 						<option value=""><?php echo esc_html__( '- choose -', 'easy-school-registration' ); ?></option>
-						<option value="<?php echo esc_attr(ESR_Dancing_As::LEADER); ?>"><?php echo (empty( $leader_settings_label ) ? esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::LEADER )) : esc_html($leader_settings_label) ); ?></option>
-						<option value="<?php echo esc_attr(ESR_Dancing_As::FOLLOWER); ?>"><?php echo (empty( $follower_settings_label ) ? esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::FOLLOWER )) : esc_html($follower_settings_label) ); ?></option>
+						<option value="<?php echo esc_attr(ESR_Dancing_As::LEADER); ?>"><?php echo esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::LEADER )); ?></option>
+						<option value="<?php echo esc_attr(ESR_Dancing_As::FOLLOWER); ?>"><?php echo esc_html(ESR()->dance_as->get_title( ESR_Dancing_As::FOLLOWER )); ?></option>
 					</select>
 				</div>
 				<?php if ( intval( ESR()->settings->esr_get_option( 'dancing_with_enforce', 1 ) ) === -1 ) { ?>
