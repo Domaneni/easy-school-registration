@@ -141,15 +141,17 @@ class ESR_Registration_Table_Column_Content {
         <?php
     }
 
-    public static function esr_print_dance_role_content_callback ($wave, $registration) {
+    public static function esr_print_dance_role_content_callback ($wave, $registration, $user_data, $courses_data) {
         if (!(intval(ESR()->settings->esr_get_option('disable_couples', -1)) === -1)) {
             return;
         }
 
+        $course_meta = $courses_data[ $registration->course_id ];
+
         ?>
             <td class="dancing-as"
                 data-as="<?php echo esc_attr($registration->dancing_as); ?>">
-                <?php echo esc_html(ESR()->dance_as->get_title( $registration->dancing_as )); ?>
+                <?php echo esc_html(ESR()->dance_as->get_title( $registration->dancing_as, $course_meta )); ?>
             </td>
         <?php
     }
@@ -215,7 +217,7 @@ add_action('esr_template_registration_table_content', ['ESR_Registration_Table_C
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_course_content_callback'], 90, 4);
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_day_content_callback'], 100, 5);
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_time_content_callback'], 110, 5);
-add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_dance_role_content_callback'], 120, 2);
+add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_dance_role_content_callback'], 120, 4);
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_registered_partner_content_callback'], 130, 2);
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_paired_partner_content_callback'], 140, 3);
 add_action('esr_template_registration_table_content', ['ESR_Registration_Table_Column_Content', 'esr_print_free_registration_content_callback'], 150, 2);

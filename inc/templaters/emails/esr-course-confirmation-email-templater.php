@@ -113,7 +113,7 @@ class ESR_Course_Confirmation_Email_Templater
                         }
                         case 'dancing_as':
                         {
-                            $parameter = $registration->dancing_as;
+                            $parameter = ESR()->dance_as->get_title($registration->dancing_as, $course_data);
                             break;
                         }
                         case 'user_registration_info':

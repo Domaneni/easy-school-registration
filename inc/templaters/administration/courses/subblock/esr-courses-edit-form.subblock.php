@@ -49,6 +49,7 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 		}
 
 		add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_course_settings']);
+        add_action('esr_course_edit_additional_form_input', [get_called_class(), 'input_dance_as_rewrite_course_settings']);
 		add_action('esr_course_edit_form_submit', [get_called_class(), 'input_submit'], 10, 2);
 	}
 
@@ -462,6 +463,19 @@ class ESR_Courses_Edit_Form_Subblock_Templater {
 			<td>
 				<input type="checkbox" name="course_settings[disable_registration]" <?php checked($course !== null && isset($course->disable_registration) && $course->disable_registration ? intval($course->disable_registration) : 0, 1) ?>>
 				<?php ESR_Tooltip_Templater_Helper::print_tooltip(esc_html__('If selected, registrations for this course will be disabled.', 'easy-school-registration')); ?>
+			</td>
+		</tr>
+		<?php
+	}
+
+
+	public static function input_dance_as_rewrite_course_settings($course) {
+		?>
+		<tr class="show_solo">
+			<th><?php esc_html_e('Dance As Rewrite', 'easy-school-registration'); ?></th>
+			<td>
+				<input type="text" name="course_settings[dance_as_solo_rewrite]" value="<?php echo ((($course !== null) && isset($course->dance_as_solo_rewrite)) ? esc_attr($course->dance_as_solo_rewrite) : ''); ?>">
+				<?php ESR_Tooltip_Templater_Helper::print_tooltip(esc_html__('If filled this text will be used as Dance as value.', 'easy-school-registration')); ?>
 			</td>
 		</tr>
 		<?php
