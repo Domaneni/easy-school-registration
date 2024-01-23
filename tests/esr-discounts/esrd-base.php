@@ -12,6 +12,20 @@ class ESRD_Base {
 	}
 
 
+    public function delete_all_data() {
+        global $wpdb;
+
+        $this->base->delete_all_data();
+
+        $wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_discount");
+        $wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_wave_discount");
+        $wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_time_discount");
+        $wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_checkbox_discount");
+
+        wp_cache_flush();
+    }
+
+
 	public function add_discount($wave_ids, $data) {
 		global $wpdb;
 		$worker = new ESRD_Discount_Worker();

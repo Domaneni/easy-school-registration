@@ -197,7 +197,7 @@ class ESR_Settings_Tag_Templater {
 
 
 	public static function esr_tag_replace_dancing_as($tag, $body, $dancing_as) {
-		return str_replace("[" . $tag['tag'] . "]", esc_html(ESR()->dance_as->get_title($dancing_as)), $body);
+		return str_replace("[" . $tag['tag'] . "]", esc_html($dancing_as), $body);
 	}
 
 
@@ -233,7 +233,7 @@ class ESR_Settings_Tag_Templater {
 				if ((isset($course->dancing_with) && $course->dancing_with) || (isset($course->dancing_as) && !ESR()->dance_as->is_solo($course->dancing_as))) {
 					$replacement .= "<br><ul style='margin-left: 20px'>";
 					if (isset($course->dancing_as) && !ESR()->dance_as->is_solo($course->dancing_as)) {
-						$replacement .= "<li>" . esc_html__('Role', 'easy-school-registration') . ": " . esc_html(ESR()->dance_as->get_title($course->dancing_as)) . "</li>";
+						$replacement .= "<li>" . esc_html__('Role', 'easy-school-registration') . ": " . esc_html(ESR()->dance_as->get_title($course->dancing_as, $course_data)) . "</li>";
 					}
 					if (isset($course->dancing_with) && $course->dancing_with) {
 						$replacement .= "<li>" . esc_html__('Partner', 'easy-school-registration') . ": " . esc_html($course->dancing_with) . "</li>";

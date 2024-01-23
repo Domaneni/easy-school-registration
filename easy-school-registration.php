@@ -202,7 +202,7 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 
                 register_activation_hook(ESR_PLUGIN_FILE, array('ESR_Database', 'esr_database_install_callback'));
 
-				self::$instance->init();
+				self::$instance->load_text_domain();
 
 				self::$instance->settings               = new ESR_Settings();
 				self::$instance->course                 = new ESR_Course();
@@ -453,28 +453,15 @@ if ( ! class_exists( 'Easy_School_Registration' ) ) {
 			$esr_settings   = $settings_class->esr_get_settings();
 		}
 
-
-        /**
-         * Load actions
-         *
-         * @access private
-         * @return void
-         */
-        private function init() {
-            add_action( 'init', array( $this, 'load_text_domain' ), 99 );
-        }
-
-
         /**
          * Load text domain
          *
          * @access public
          * @return void
          */
-		public function load_text_domain() {
+        private function load_text_domain() {
             load_plugin_textdomain( 'easy-school-registration', false, dirname(plugin_basename(__FILE__)) . '/languages/' );
 		}
-
 	}
 }
 

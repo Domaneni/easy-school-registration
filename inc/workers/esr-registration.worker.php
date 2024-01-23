@@ -132,8 +132,9 @@ class ESR_Registration_Worker {
 		if ( ( intval( ESR()->settings->esr_get_option( 'show_phone_input', 1 ) ) !== - 1 ) && ( intval( ESR()->settings->esr_get_option( 'phone_required', 1 ) ) !== - 1 ) && $this->check_required( 'phone', $data ) ) {
 			$esr_reg_errors->add( 'user_info.phone', esc_html__( 'Phone is required.', 'easy-school-registration' ) );
 		}
-		if ( ! isset( $data->courses ) || ! $data->courses ) {
-			$esr_reg_errors->add( 'courses.all.empty', esc_html__( 'You must choose at least one course.', 'easy-school-registration' ) );
+
+		if ( apply_filters('esr_registration_validation_registration', true, $data) ) {
+			$esr_reg_errors->add( 'courses.all.empty', esc_html__(apply_filters('esr_registration_validation_registration_message', __( 'You must choose at least one course.', 'easy-school-registration' ))));
 		} else {
 			foreach ( $data->courses as $course_id => $course ) {
 				if ( ! ESR()->course->is_course_solo( intval( $course_id ) ) ) {
@@ -276,4 +277,9 @@ class ESR_Registration_Worker {
 		return $wpdb->insert_id;
 	}
 
+    public static function esr_registration_validation_registration_callback($stop_registration, $data) {
+        return !isset($data->courses) || !$data->courses; //Default validation if there are some courses selected
+    }
 }
+
+add_filter('esr_registration_validation_registration', ['ESR_Registration_Worker', 'esr_registration_validation_registration_callback'], 10, 2);

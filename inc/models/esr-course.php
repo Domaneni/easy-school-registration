@@ -47,6 +47,9 @@ class ESR_Course
 			'disable_registration' => [
 				'type' => 'checkbox'
 			],
+			'dance_as_solo_rewrite' => [
+				'type' => 'text'
+			],
 		];
 	}
 
@@ -61,7 +64,8 @@ class ESR_Course
 		global $wpdb;
 
 		$course = $wpdb->get_row($wpdb->prepare("SELECT * FROM {$wpdb->prefix}esr_course_data WHERE id = %d", [intval($course_id)]));
-		if ($course !== null) {
+
+        if ($course !== null) {
 			$course->real_price = $this->get_course_price($course_id, $course->wave_id);
 			return $this->esr_prepare_course_settings($course);
 		}
@@ -76,12 +80,20 @@ class ESR_Course
 	 *
 	 * @return array
 	 */
-	public function get_courses_data_by_wave($wave_id, $as_array = false)
+	public function get_courses_data_by_wave($wave_id, $as_array = false, $transform_settings = false)
 	{
 		global $wpdb;
 		$data = $wpdb->get_results($wpdb->prepare("SELECT *, " . $this->esr_get_course_price_sql($wave_id) . " AS real_price FROM {$wpdb->prefix}esr_course_data WHERE wave_id = %d ORDER BY day, hall_key, time_from, time_to, id", [intval($wave_id)]));
 
-		return $this->check_array_transform($data, $as_array);
+        $courses_data = $this->get_courses_as_array($data);
+
+        if ($as_array && $transform_settings) {
+            foreach ($courses_data as $key => $course) {
+                $courses_data[$key] = $this->esr_prepare_course_settings($course);
+            }
+        }
+
+        return $courses_data;
 	}
 
 
@@ -279,12 +291,12 @@ class ESR_Course
 	 */
 	private function get_courses_as_array($results)
 	{
-		$waves = [];
+		$courses = [];
 		foreach ($results as $result) {
-			$waves[$result->id] = $result;
+            $courses[$result->id] = $result;
 		}
 
-		return $waves;
+		return $courses;
 	}
 
 

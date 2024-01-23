@@ -1,20 +1,18 @@
 {
+    "name": "domaneni/easy-school-registration",
     "require-dev": {
-        "phpunit/phpunit": "^6.3",
-        "wp-cli/wp-cli" : "~0.22",
-        "psy/psysh" : "~0.6",
-        "phpstan/phpstan": "^0.8.0",
-        "guzzle/guzzle": "~3.7"
+        "phpunit/phpunit": "^9.5",
+        "yoast/phpunit-polyfills": "^2.0"
     },
-    "scripts": {
-        "phpstan": "bash vendor/bin/phpstan analyse --level=0",
-        "test": "bash vendor/bin/phpunit --coverage-clover=./reports/clover.xml --coverage-html=./reports"
-    },
-    "require": {
-    },
-    "config": {
-        "allow-plugins": {
-            "ocramius/package-versions": true
+    "autoload": {
+        "psr-4": {
+            "ESR\\EasySchoolRegistration\\": "inc/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Zbyněk Nedoma",
+            "email": "domaneni@gmail.com"
+        }
+    ]
 }

@@ -15,12 +15,17 @@ class ESR_Dancing_As {
 	public function __construct() {
 		$this->items = [
 			self::LEADER   => [
+                'id' => self::LEADER,
 				'title' => esc_html__('Leader', 'easy-school-registration'),
+                'settings_label' => 'leader_label'
 			],
 			self::FOLLOWER => [
+                'id' => self::FOLLOWER,
 				'title' => esc_html__('Follower', 'easy-school-registration'),
+                'settings_label' => 'follower_label'
 			],
 			self::SOLO => [
+                'id' => self::SOLO,
 				'title' => esc_html__('Solo', 'easy-school-registration')
 			]
 		];
@@ -43,10 +48,18 @@ class ESR_Dancing_As {
 	}
 
 
-	public function get_title($key) {
+	public function get_title($key, $course_data = null) {
 		$item = $this->get_item($key);
 
 		if ($item) {
+            if ($this->is_solo($key) && !empty($course_data) && !empty($course_data->dance_as_solo_rewrite)) {
+                return $course_data->dance_as_solo_rewrite;
+            }
+
+            if (!empty($item['settings_label'])) {
+                return ESR()->settings->esr_get_option( $item['settings_label'], $item['title']);
+            }
+
 			return $item['title'];
 		}
 

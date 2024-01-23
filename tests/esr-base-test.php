@@ -10,6 +10,9 @@
  */
 class ESR_Base_Test {
 
+
+    protected static $initialized = FALSE;
+
 	/** var int */
 	private $teacher_first;
 
@@ -22,7 +25,13 @@ class ESR_Base_Test {
 
 
 	public function setUp() {
-		global $wpdb;
+        if (!self::$initialized) {
+            \ESR_Database::esr_database_install_callback();
+            \ESRET_Database::esret_database_install_callback();
+            self::$initialized = TRUE;
+        }
+
+        global $wpdb;
 
 		global $esr_settings;
 		$esr_settings['floating_price_enabled'] = true;
@@ -74,11 +83,6 @@ class ESR_Base_Test {
 
 		$wpdb->query("TRUNCATE TABLE {$wpdb->usermeta}");
 		$wpdb->query("TRUNCATE TABLE {$wpdb->users}");
-
-		$wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_discount");
-		$wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_wave_discount");
-		$wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_time_discount");
-		$wpdb->query("TRUNCATE TABLE {$wpdb->prefix}esrd_checkbox_discount");
 
 		wp_cache_flush();
 	}
