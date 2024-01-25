@@ -2,8 +2,8 @@
 Contributors: domaneni
 Donate link: https://ko-fi.com/domaneni
 Tags: school, registration, dance, easy registration
-Tested up to: 6.3.2
-Stable Tag: 3.9.7
+Tested up to: 6.4.2
+Stable Tag: 3.9.8
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -31,7 +31,7 @@ The interactive registration form automatically checks if registration for the w
 * [Website](https://easyschoolregistration.com/)
 * [Demo](https://easyschoolregistration.com/demo/)
 * [Documentation](https://easyschoolregistration.com/documentation/)
-* [Support](https://ko-fi.com/domaneni)
+* [Github](https://github.com/Domaneni/easy-school-registration/)
 
 == Installation ==
 
@@ -62,6 +62,12 @@ From your WordPress dashboard
 6. Styling setting page
 
 == Changelog ==
+
+= 3.9.8 2024-01-23 =
+
+* New - Option to rename solo course title
+* New - New registration validation filter
+* Fix - Translations loading
 
 = 3.9.7 2023-10-28 =
 

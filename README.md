@@ -9,6 +9,12 @@
 
 ---
 
+3.9.8 - 2024-01-23
+
+- New: Option to rename solo course title
+- New: New registration validation filter
+- Fix: Translations loading
+
 3.9.7 - 2023-10-28
 
 - New: New user registration form (enabled by settings)
